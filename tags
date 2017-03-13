@@ -1,0 +1,57 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALLOWED_HOSTS	englishfighter/settings.py	/^ALLOWED_HOSTS = []$/;"	kind:variable	line:28
+AUTH_PASSWORD_VALIDATORS	englishfighter/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	kind:variable	line:88
+BASE_DIR	englishfighter/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:16
+DATABASES	englishfighter/settings.py	/^DATABASES = {$/;"	kind:variable	line:77
+DEBUG	englishfighter/settings.py	/^DEBUG = True$/;"	kind:variable	line:26
+FighterConfig	fighter/apps.py	/^class FighterConfig(AppConfig):$/;"	kind:class	line:4
+INSTALLED_APPS	englishfighter/settings.py	/^INSTALLED_APPS = [$/;"	kind:variable	line:33
+LANGUAGE_CODE	englishfighter/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	kind:variable	line:107
+LoginFormView	fighter/views.py	/^class LoginFormView(FormView):$/;"	kind:class	line:28
+LogoutView	fighter/views.py	/^class LogoutView(View):$/;"	kind:class	line:40
+MIDDLEWARE	englishfighter/settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:43
+ROOT_URLCONF	englishfighter/settings.py	/^ROOT_URLCONF = 'englishfighter.urls'$/;"	kind:variable	line:53
+RegisterFormView	fighter/views.py	/^class RegisterFormView(FormView):$/;"	kind:class	line:19
+SECRET_KEY	englishfighter/settings.py	/^SECRET_KEY = '(uk6^)nq%sct#p4m2^3m_6(80v*1+&7t(+m!bg**hc-l*!pb!('$/;"	kind:variable	line:23
+STATIC_URL	englishfighter/settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:121
+TEMPLATES	englishfighter/settings.py	/^TEMPLATES = [$/;"	kind:variable	line:55
+TIME_ZONE	englishfighter/settings.py	/^TIME_ZONE = 'UTC'$/;"	kind:variable	line:109
+USE_I18N	englishfighter/settings.py	/^USE_I18N = True$/;"	kind:variable	line:111
+USE_L10N	englishfighter/settings.py	/^USE_L10N = True$/;"	kind:variable	line:113
+USE_TZ	englishfighter/settings.py	/^USE_TZ = True$/;"	kind:variable	line:115
+WSGI_APPLICATION	englishfighter/settings.py	/^WSGI_APPLICATION = 'englishfighter.wsgi.application'$/;"	kind:variable	line:71
+__init__.py	englishfighter/__init__.py	1;"	kind:file	line:1
+__init__.py	fighter/__init__.py	1;"	kind:file	line:1
+__init__.py	fighter/migrations/__init__.py	1;"	kind:file	line:1
+admin.py	fighter/admin.py	1;"	kind:file	line:1
+application	englishfighter/wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
+apps.py	fighter/apps.py	1;"	kind:file	line:1
+demo	fighter/views.py	/^def demo(request):$/;"	kind:function	line:63
+form_class	fighter/views.py	/^    form_class = AuthenticationForm$/;"	kind:variable	line:29
+form_class	fighter/views.py	/^    form_class = UserCreationForm$/;"	kind:variable	line:20
+form_valid	fighter/views.py	/^    def form_valid(self, form):$/;"	kind:member	line:24
+form_valid	fighter/views.py	/^    def form_valid(self, form):$/;"	kind:member	line:34
+get	fighter/views.py	/^    def get(self, request):$/;"	kind:member	line:41
+index	fighter/views.py	/^def index(request):$/;"	kind:function	line:45
+manage.py	manage.py	1;"	kind:file	line:1
+models.py	fighter/models.py	1;"	kind:file	line:1
+name	fighter/apps.py	/^    name = 'fighter'$/;"	kind:variable	line:5
+profile	fighter/views.py	/^def profile(request):$/;"	kind:function	line:66
+settings.py	englishfighter/settings.py	1;"	kind:file	line:1
+success_url	fighter/views.py	/^    success_url = "\/"$/;"	kind:variable	line:32
+success_url	fighter/views.py	/^    success_url = '\/login'$/;"	kind:variable	line:21
+template_name	fighter/views.py	/^    template_name = 'fighter\/register.html'$/;"	kind:variable	line:22
+template_name	fighter/views.py	/^    template_name = 'fighter\/register.html'$/;"	kind:variable	line:31
+tests.py	fighter/tests.py	1;"	kind:file	line:1
+tmp	fighter/views.py	/^def tmp(request):$/;"	kind:function	line:73
+urlpatterns	englishfighter/urls.py	/^urlpatterns = [$/;"	kind:variable	line:19
+urlpatterns	fighter/urls.py	/^urlpatterns = [$/;"	kind:variable	line:6
+urls.py	englishfighter/urls.py	1;"	kind:file	line:1
+urls.py	fighter/urls.py	1;"	kind:file	line:1
+views.py	fighter/views.py	1;"	kind:file	line:1
+wsgi.py	englishfighter/wsgi.py	1;"	kind:file	line:1
