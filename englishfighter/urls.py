@@ -20,4 +20,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('fighter.urls')),
     url(r'^fighter/', include('fighter.urls')),
+    url(r'^avatar/', include('avatar.urls')),
+    url('', include('social_django.urls', namespace='social')),
 ]

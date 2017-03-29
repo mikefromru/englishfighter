@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponseRedirect, HttpResponse
+from django.shortcuts import render, HttpResponseRedirect, HttpResponse, render_to_response
 from django.template import TemplateDoesNotExist
 from django.http import Http404
 
@@ -10,64 +10,73 @@ from django.contrib.auth.forms import UserCreationForm
 
 # for Authentication
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import login
+from django.contrib import auth
 
 # for Logout
 from django.views.generic.base import View
-from django.contrib.auth import logout 
 
-class RegisterFormView(FormView):
-    form_class = UserCreationForm
-    success_url = '/login'
-    template_name = 'fighter/register.html'
+# from .forms import RegistrationForm
 
-    def form_valid(self, form):
-        form.save()
-        return super(RegisterFormView, self).form_valid(form)
-
-class LoginFormView(FormView):
-    form_class = AuthenticationForm
-    # template_name = "fighter/login.html"
-    template_name = 'fighter/register.html'
-    success_url = "/"
-
-    def form_valid(self, form):
-        self.user = form.get_user()
-        login(self.request, self.user)
-        return super(LoginFormView, self).form_valid(form)
+def register(request):
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            # user.set_password()
+            user = auth.authenticate(username=form.cleaned_data.get('username'), password=form.cleaned_data.get('password1'))
+            auth.login(request, user)
+            return HttpResponseRedirect('/profile')
+    else:
+        form = UserCreationForm()
+    return render(request, 'fighter/register.html', {'form': form})       
 
 
-class LogoutView(View):
-    def get(self, request):
-        logout(request)
-        return HttpResponseRedirect("/index")
+def login(request):
+    form = {}
+    if request.POST:
+        username = request.POST.get('username', '')
+        password = request.POST.get('password', '')
+        user = auth.authenticate(username=username, password=password)
+        if user is not None and user.is_active:
+            auth.login(request, user)
+            return HttpResponseRedirect('/demo')
+        else:
+            form['login_error'] = 'Неправильный логин или пароль'
+            return render(request, 'fighter/login.html', form)
+    else:
+        return render(request, 'fighter/login.html', form)
 
-def index(request):
-    try:
-        if request.POST.get('login'):
-            username = request.POST['username']
-            password = request.POST['password']
-            user = auth.authenticate(username=username, password=password)
-            if user is not None:
-                login(request, user)
-                return HttpResponseRedirect('/demo')
-            else:
-                # return HttpResponse('you are a fuckin bitch')
-                # return HttpResponseRedirect('/login')
-                pass
 
-        return render(request, "fighter/index.html")
-    except TemplateDoesNotExist:
-        raise Http404() 
+def logout(request):
+        auth.logout(request)
+        return HttpResponseRedirect("/demo")
+
+# def index(request):
+#     try:
+#         if request.POST.get('login'):
+#             username = request.POST['username']
+#             password = request.POST['password']
+#             user = auth.authenticate(username=username, password=password)
+#             print(user)
+#             if user is not None:
+#                 login(request, user)
+#                 return HttpResponseRedirect('/demo')
+#             else:
+#                 return HttpResponse('Login or password is not correct')
+#                 # return HttpResponseRedirect('/index')
+
+#         return render(request, "fighter/index.html")
+#     except TemplateDoesNotExist:
+#         raise Http404() 
 
 def demo(request):
     return render(request, 'fighter/demo.html')
 
 def profile(request):
-    if request.user.is_authenticated():
-        return render(request, 'fighter/profile.html')
-    else:
-        return render(request, 'fighter/login.html')
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/login')
+
+    return render(request, 'fighter/profile.html')
 
 
 def tmp(request):

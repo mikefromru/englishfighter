@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'fighter',
+    'avatar',
+    # 'social.apps.django_app.default',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -63,6 +66,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
+                'django.template.context_processors.tz',
+                'django.template.context_processors.csrf',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -104,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru_RU'
 
 TIME_ZONE = 'UTC'
 
@@ -114,8 +124,64 @@ USE_L10N = True
 
 USE_TZ = True
 
+AUTHENTICATION_BACKENDS = (
+    # 'social_core.backends.open_id.OpenIdAuth',
+    # 'social_core.backends.google.GoogleOpenId',
+    # 'social_core.backends.google.GoogleOAuth',
+    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.vk.VKOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'django.contrib.auth.backends.ModelBackend',
+)
 
+# for Twitter
+SOCIAL_AUTH_TWITTER_KEY = 'DtZ6SCjGIaf97NjJcB3AleXIt'
+SOCIAL_AUTH_TWITTER_SECRET = 'mxsjtDhw1Num9fWW2tMcGJvbcdiWurNe5wmHyVrVlttHPUOXZ2'
+# for Google+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '733504113459-avsrsqv42erkrp7frjuc6e7gf1oqcgh8.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '3Cjh1DpwuQel7TLC_bszlQn8'
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_IGNORE_DEFAULT_SCOPE = True
+SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [
+    'https://www.googleapis.com/auth/userinfo.email',
+    'https://www.googleapis.com/auth/userinfo.profile'
+]
+
+# for Facebook
+SOCIAL_AUTH_FACEBOOK_API_VERSION = '2.8'
+SOCIAL_AUTH_FACEBOOK_KEY = '275136636232339'
+SOCIAL_AUTH_FACEBOOK_SECRET = "376f04091d9249ef25ab5a5c6e4cc019"
+
+# for Vkontakte
+# VK_API_ID = VKONTAKTE_API_ID = VKONTAKTE_APP_ID = VK_APP_ID = '5953404'
+# VK_API_SECRET = VKONTAKTE_API_SECRET = VKONTAKTE_APP_SECRET = VK_APP_SECRET = 'Jh3hdFkdrBBBGMO34biz'
+
+SOCIAL_AUTH_VK_OAUTH2_KEY = '5953404'
+SOCIAL_AUTH_VK_OAUTH2_SECRET = 'Jh3hdFkdrBBBGMO34biz'
+# SOCIAL_AUTH_VK_APP_USER_MODE = 2
+
+
+
+
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/demo'
+SOCIAL_AUTH_LOGIN_URL = '/'
+
+# SOCIAL_AUTH_PIPELINE = (
+#     'social.pipeline.social_auth.social_details',
+#     'social.pipeline.social_auth.social_uid',
+#     'social.pipeline.social_auth.auth_allowed',
+#     'social.pipeline.social_auth.social_user',
+#     'social.pipeline.user.get_username',
+#     'social.pipeline.social_auth.associate_by_email',
+#     'social.pipeline.user.create_user',
+#     'social.pipeline.social_auth.associate_user',
+#     'social.pipeline.social_auth.load_extra_data',
+#     'social.pipeline.user.user_details'
+# )
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.10/howto/static-files/
+# https://docs.djangoproject.com/en/1.10/howto/static-files
 
 STATIC_URL = '/static/'
+# AUTH_USER_MODUL = 'fighter.Proile'

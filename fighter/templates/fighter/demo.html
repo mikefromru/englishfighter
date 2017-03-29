@@ -6,8 +6,12 @@
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
-<body>
-    <h1>My name is demo.html</h1>
+<body style="background-color: #2B3D52">
+    <h3>Вход через социальные сети</h3>
+    <a href="{% url 'social:begin' 'twitter' %}">Twitter</a><br>
+    <a href="{% url 'social:begin' 'google-oauth2' %}">Google</a><br>
+    <a href="{% url 'social:begin' 'facebook' %}">Facebook</a><br>
+    <a href="{% url 'social:begin' 'vk-oauth2' %}">Vkontakte</a><br>
 </body>
 </html>
 {% endblock %}

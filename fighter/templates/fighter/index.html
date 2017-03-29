@@ -17,20 +17,26 @@
     <script src="/static/fighter/js/jquery-confirm.js"></script>
 
     <script rel="stylesheet" src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+
+    <script src="http://malsup.github.com/jquery.form.js"></script> 
 </head>
 
 <body>
+    <div id="content">
     <h3>ENGLISH FIGHTER</h3>
-
     <a class='colorA' id="go"><button class="btn_login">Войти</button></a>
 
-    <div id="modal_form"><!-- Сaмo oкнo --> 
-        <div id="stupidFon">ВХОД</div>
-      <span id="modal_close">X</span> <!-- Кнoпкa зaкрыть --> 
+    
+    <!--<div id="modal_form"> Сaмo oкнo  -->
+        <!--<div id="stupidFon">ВХОД</div>-->
+      <!--<span id="modal_close">X</span>  Кнoпкa зaкрыть  -->
 
-      <form id="loginform" action="" method="POST">{% csrf_token %}
-          <br><br><br>
+      <!--<form id="loginform">{% csrf_token %}-->
+      <!--<form id="loginform" action="" method="POST">{% csrf_token %}-->
+          <!--<br><br><br>-->
 
+
+<!--
           <label>Имя или E-mail</label><br> 
           <input id="user" type="text" name="username"><br>
 
@@ -40,29 +46,38 @@
 
 
 
-          <a id="forgot_pass" href="#">Забыли пароль</a>
-          <hr/>
-          <input id="btn_alert_reg" type="submit" name="login" value="Регистрация">
-          <input id="btn_alert_log" type="submit" name="login" value="ВОЙТИ">
+          <a id="forgot_pass" href="#">Забыли пароль</a>-->
+          <!--<hr/>-->
+          <!--<input id="btn_alert_reg" type="submit" name="login" value="Регистрация">-->
+          <!--<input id="btn_alert_log" type="submit" name="login" value="ВОЙТИ">-->
+          <!--<input id="btn_alert_log" type="submit" onclick="foo()" name="login" value="ВОЙТИ">
       </form>
     </div>
-    <div id="overlay"></div><!-- Пoдлoжкa -->
-
+    <div id="overlay"></div>  Пoдлoжкa -->
+    <!--</div>-->
 
     <script src="/static/fighter/js/alert_register.js"></script>
     <script src="/static/fighter/js/check_login_form.js"></script>
 
+<p><a href="#modal1" class="open_modal">Ссылка с окном 1</a></p>
+<div id="modal1" class="modal_div">
+    <span class="modal_close">X</span>
+    <form action="" method="POST">{% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Send">
+    </form>
+</div>
+<div id="overlay"></div>
 
-
-<!--######################################################################-->
-    <!--<p><a class="demo-1">ALERT</a></p>-->
-    <!--<script>
-        $('.demo-1').on('click', function(){$.alert({
-            title: 'Attention',
-            animation: 'scale',
-            content: 'hello world'
-        });});
-    </script>-->
+ <!--######################################################################-->
+     <!--<p><a class="demo-1">ALERT</a></p>-->
+     <!--<script>
+//         $('.demo-1').on('click', function(){$.alert({
+//             title: 'Attention',
+//             animation: 'scale',
+//             content: 'hello world'
+//         });});
+//     </script>-->
 
 </body>
 </html>

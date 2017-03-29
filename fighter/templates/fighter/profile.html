@@ -1,13 +1,17 @@
 {% extends 'fighter/base.html' %}
 {% block content %}
+{% load avatar_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 <body>
-    <h3>This is the profile of {{ user }}</h3>
+    {% avatar user %}
+    <a href="{% url 'avatar_change' %}">Change your avatar</a>
+
 </body>
 </html>
 {% endblock %}
