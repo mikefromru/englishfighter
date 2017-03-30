@@ -22,10 +22,19 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '(uk6^)nq%sct#p4m2^3m_6(80v*1+&7t(+m!bg**hc-l*!pb!('
 
+#----
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+import socket
 
-ALLOWED_HOSTS = []
+host_IP = socket.gethostbyname_ex(socket.gethostname())[2]
+host_IP = ''.join(host_IP)
+if host_IP == '127.0.0.1' or '127.0.1.1':
+    DEBUG = True 
+else:
+    DEBUG = False
+#----------
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
