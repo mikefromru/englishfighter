@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'', include('fighter.urls')),
     url(r'^fighter/', include('fighter.urls')),
     url(r'^avatar/', include('avatar.urls')),
+    url(r'^accounts/', include('accounts.urls')),
     url('', include('social_django.urls', namespace='social')),
 ]

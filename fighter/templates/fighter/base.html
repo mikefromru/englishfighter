@@ -10,23 +10,23 @@
 </head>
 <body>
     <ul id="nav">
-        <li><a href="/demo">English Fighter</a></li>
+        <li><a href="/fighter/demo">English Fighter</a></li>
         {% if user.is_anonymous %}
-        <li><a href="/register">Регистрация</a></li>
+        <li><a href="/accounts/register">Регистрация</a></li>
         {% endif %}
         <div class="profile_log">
             {% if user.is_authenticated %}
                     <li><a id="mylink" href="#win">{{ user }}</a></li>
                     <div class="modal" id="MyModal">
                         <div class="modal-content">
-                            <p><a href="/profile">Профиль</a></p>
-                            <p><a href="/logout">Выйти</a></p><br>
+                            <p><a href="/accounts/profile">Профиль</a></p>
+                            <p><a href="/accounts/logout">Выйти</a></p><br>
                             <span class="close">&times;</span><br><br>
                         </div>
                     </div>
 
             {% else %}
-                <li><a href="/login">Войти</a></li>
+                <li><a href="/accounts/login">Войти</a></li>
             {% endif %}
         </div>
     </ul>

@@ -7,6 +7,7 @@
 ALLOWED_HOSTS	englishfighter/settings.py	/^ALLOWED_HOSTS = []$/;"	kind:variable	line:28
 AUTHENTICATION_BACKENDS	englishfighter/settings.py	/^AUTHENTICATION_BACKENDS = ($/;"	kind:variable	line:127
 AUTH_PASSWORD_VALIDATORS	englishfighter/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	kind:variable	line:98
+AccountsConfig	accounts/apps.py	/^class AccountsConfig(AppConfig):$/;"	kind:class	line:4
 BASE_DIR	englishfighter/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:16
 DATABASES	englishfighter/settings.py	/^DATABASES = {$/;"	kind:variable	line:87
 DEBUG	englishfighter/settings.py	/^DEBUG = True$/;"	kind:variable	line:26
@@ -14,46 +15,59 @@ FighterConfig	fighter/apps.py	/^class FighterConfig(AppConfig):$/;"	kind:class	l
 INSTALLED_APPS	englishfighter/settings.py	/^INSTALLED_APPS = [$/;"	kind:variable	line:33
 LANGUAGE_CODE	englishfighter/settings.py	/^LANGUAGE_CODE = 'ru_RU'$/;"	kind:variable	line:117
 MIDDLEWARE	englishfighter/settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:46
+PROJECT_ROOT	englishfighter/settings.py	/^PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))$/;"	kind:variable	line:187
 ROOT_URLCONF	englishfighter/settings.py	/^ROOT_URLCONF = 'englishfighter.urls'$/;"	kind:variable	line:56
 SECRET_KEY	englishfighter/settings.py	/^SECRET_KEY = '(uk6^)nq%sct#p4m2^3m_6(80v*1+&7t(+m!bg**hc-l*!pb!('$/;"	kind:variable	line:23
-SOCIAL_AUTH_FACEBOOK_API_VERSION	englishfighter/settings.py	/^SOCIAL_AUTH_FACEBOOK_API_VERSION = '2.8'$/;"	kind:variable	line:146
-SOCIAL_AUTH_FACEBOOK_KEY	englishfighter/settings.py	/^SOCIAL_AUTH_FACEBOOK_KEY = '275136636232339'$/;"	kind:variable	line:147
-SOCIAL_AUTH_FACEBOOK_SECRET	englishfighter/settings.py	/^SOCIAL_AUTH_FACEBOOK_SECRET = "376f04091d9249ef25ab5a5c6e4cc019"$/;"	kind:variable	line:148
+SOCIAL_AUTH_FACEBOOK_API_VERSION	englishfighter/settings.py	/^SOCIAL_AUTH_FACEBOOK_API_VERSION = '2.8'$/;"	kind:variable	line:152
+SOCIAL_AUTH_FACEBOOK_KEY	englishfighter/settings.py	/^SOCIAL_AUTH_FACEBOOK_KEY = '275136636232339'$/;"	kind:variable	line:153
+SOCIAL_AUTH_FACEBOOK_SECRET	englishfighter/settings.py	/^SOCIAL_AUTH_FACEBOOK_SECRET = "376f04091d9249ef25ab5a5c6e4cc019"$/;"	kind:variable	line:154
+SOCIAL_AUTH_GOOGLE_OAUTH2_IGNORE_DEFAULT_SCOPE	englishfighter/settings.py	/^SOCIAL_AUTH_GOOGLE_OAUTH2_IGNORE_DEFAULT_SCOPE = True$/;"	kind:variable	line:145
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY	englishfighter/settings.py	/^SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '733504113459-avsrsqv42erkrp7frjuc6e7gf1oqcgh8.apps.googleusercontent.com'$/;"	kind:variable	line:142
+SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE	englishfighter/settings.py	/^SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = [$/;"	kind:variable	line:146
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET	englishfighter/settings.py	/^SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '3Cjh1DpwuQel7TLC_bszlQn8'$/;"	kind:variable	line:143
-SOCIAL_AUTH_LOGIN_REDIRECT_URL	englishfighter/settings.py	/^SOCIAL_AUTH_LOGIN_REDIRECT_URL = '\/demo'$/;"	kind:variable	line:155
-SOCIAL_AUTH_LOGIN_URL	englishfighter/settings.py	/^SOCIAL_AUTH_LOGIN_URL = '\/'$/;"	kind:variable	line:156
-SOCIAL_AUTH_PIPELINE	englishfighter/settings.py	/^SOCIAL_AUTH_PIPELINE = ($/;"	kind:variable	line:158
+SOCIAL_AUTH_LOGIN_REDIRECT_URL	englishfighter/settings.py	/^SOCIAL_AUTH_LOGIN_REDIRECT_URL = '\/demo'$/;"	kind:variable	line:168
+SOCIAL_AUTH_LOGIN_URL	englishfighter/settings.py	/^SOCIAL_AUTH_LOGIN_URL = '\/'$/;"	kind:variable	line:169
 SOCIAL_AUTH_TWITTER_KEY	englishfighter/settings.py	/^SOCIAL_AUTH_TWITTER_KEY = 'DtZ6SCjGIaf97NjJcB3AleXIt'$/;"	kind:variable	line:139
 SOCIAL_AUTH_TWITTER_SECRET	englishfighter/settings.py	/^SOCIAL_AUTH_TWITTER_SECRET = 'mxsjtDhw1Num9fWW2tMcGJvbcdiWurNe5wmHyVrVlttHPUOXZ2'$/;"	kind:variable	line:140
-SOCIAL_AUTH_URL_NAMESPACE	englishfighter/settings.py	/^SOCIAL_AUTH_URL_NAMESPACE = 'social'$/;"	kind:variable	line:154
-STATIC_URL	englishfighter/settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:173
+SOCIAL_AUTH_URL_NAMESPACE	englishfighter/settings.py	/^SOCIAL_AUTH_URL_NAMESPACE = 'social'$/;"	kind:variable	line:167
+SOCIAL_AUTH_VK_OAUTH2_KEY	englishfighter/settings.py	/^SOCIAL_AUTH_VK_OAUTH2_KEY = '5953404'$/;"	kind:variable	line:160
+SOCIAL_AUTH_VK_OAUTH2_SECRET	englishfighter/settings.py	/^SOCIAL_AUTH_VK_OAUTH2_SECRET = 'Jh3hdFkdrBBBGMO34biz'$/;"	kind:variable	line:161
+STATIC_ROOT	englishfighter/settings.py	/^STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')$/;"	kind:variable	line:188
+STATIC_URL	englishfighter/settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:190
 TEMPLATES	englishfighter/settings.py	/^TEMPLATES = [$/;"	kind:variable	line:58
 TIME_ZONE	englishfighter/settings.py	/^TIME_ZONE = 'UTC'$/;"	kind:variable	line:119
 USE_I18N	englishfighter/settings.py	/^USE_I18N = True$/;"	kind:variable	line:121
 USE_L10N	englishfighter/settings.py	/^USE_L10N = True$/;"	kind:variable	line:123
 USE_TZ	englishfighter/settings.py	/^USE_TZ = True$/;"	kind:variable	line:125
 WSGI_APPLICATION	englishfighter/settings.py	/^WSGI_APPLICATION = 'englishfighter.wsgi.application'$/;"	kind:variable	line:81
+__init__.py	accounts/__init__.py	1;"	kind:file	line:1
+__init__.py	accounts/migrations/__init__.py	1;"	kind:file	line:1
 __init__.py	englishfighter/__init__.py	1;"	kind:file	line:1
 __init__.py	fighter/__init__.py	1;"	kind:file	line:1
+admin.py	accounts/admin.py	1;"	kind:file	line:1
 admin.py	fighter/admin.py	1;"	kind:file	line:1
 application	englishfighter/wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
+apps.py	accounts/apps.py	1;"	kind:file	line:1
 apps.py	fighter/apps.py	1;"	kind:file	line:1
 demo	fighter/views.py	/^def demo(request):$/;"	kind:function	line:72
 forms.py	fighter/forms.py	1;"	kind:file	line:1
 login	fighter/views.py	/^def login(request):$/;"	kind:function	line:34
 logout	fighter/views.py	/^def logout(request):$/;"	kind:function	line:50
 manage.py	manage.py	1;"	kind:file	line:1
+models.py	accounts/models.py	1;"	kind:file	line:1
 models.py	fighter/models.py	1;"	kind:file	line:1
+name	accounts/apps.py	/^    name = 'accounts'$/;"	kind:variable	line:5
 name	fighter/apps.py	/^    name = 'fighter'$/;"	kind:variable	line:5
 profile	fighter/views.py	/^def profile(request):$/;"	kind:function	line:75
 register	fighter/views.py	/^def register(request):$/;"	kind:function	line:20
 settings.py	englishfighter/settings.py	1;"	kind:file	line:1
+tests.py	accounts/tests.py	1;"	kind:file	line:1
 tests.py	fighter/tests.py	1;"	kind:file	line:1
 tmp	fighter/views.py	/^def tmp(request):$/;"	kind:function	line:82
 urlpatterns	englishfighter/urls.py	/^urlpatterns = [$/;"	kind:variable	line:19
 urlpatterns	fighter/urls.py	/^urlpatterns = [$/;"	kind:variable	line:6
 urls.py	englishfighter/urls.py	1;"	kind:file	line:1
 urls.py	fighter/urls.py	1;"	kind:file	line:1
+views.py	accounts/views.py	1;"	kind:file	line:1
 views.py	fighter/views.py	1;"	kind:file	line:1
 wsgi.py	englishfighter/wsgi.py	1;"	kind:file	line:1
