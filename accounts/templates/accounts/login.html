@@ -19,6 +19,11 @@
         <br>
         <input type="submit" value="Вход">
     </form>
+        <h3>Вход через социальные сети</h3>
+        <a href="{% url 'social:begin' 'twitter' %}">Twitter</a><br>
+        <a href="{% url 'social:begin' 'google-oauth2' %}">Google</a><br>
+        <a href="{% url 'social:begin' 'facebook' %}">Facebook</a><br>
+        <a href="{% url 'social:begin' 'vk-oauth2' %}">Vkontakte</a><br>
 </body>
 </html>
 {% endblock %}
