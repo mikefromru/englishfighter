@@ -42,13 +42,16 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'fighter',
     'avatar',
     'accounts',
     'social_django',
+    'registration',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -65,7 +68,7 @@ ROOT_URLCONF = 'englishfighter.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -134,9 +137,6 @@ USE_TZ = True
 from .settings_local import *
 
 AUTHENTICATION_BACKENDS = (
-    # 'social_core.backends.open_id.OpenIdAuth',
-    # 'social_core.backends.google.GoogleOpenId',
-    # 'social_core.backends.google.GoogleOAuth',
     'social_core.backends.google.GoogleOAuth2',
     'social_core.backends.facebook.FacebookOAuth2',
     'social_core.backends.vk.VKOAuth2',
@@ -171,6 +171,13 @@ SOCIAL_AUTH_URL_NAMESPACE = 'social'
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/demo'
 SOCIAL_AUTH_LOGIN_URL = '/'
 
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL =  '/'
+
+ACCOUNT_ACTIVATION_DAYS = 3
+REGISTRATION_AUTO_LOGIN = True
+SITE_ID = 1
+
 # SOCIAL_AUTH_PIPELINE = (
 #     'social.pipeline.social_auth.social_details',
 #     'social.pipeline.social_auth.social_uid',
@@ -191,4 +198,22 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 STATIC_URL = '/static/'
-# AUTH_USER_MODUL = 'fighter.Proile'
+STATICFILES_DIRST = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
+############# CONFIG DJANGO SEND EMAIL AND REDUX-REGISTRATION #####################
+
+EMAIL_HOST = EMAIL_HOST
+
+EMAIL_HOST_USER = EMAIL_HOST_USER
+
+EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
+
+EMAIL_PORT = EMAIL_PORT
+
+EMAIL_USE_TLS = EMAIL_USE_TLS
+
+# DEFAULT_FROM_EMAIL = 'you_fucking@google.ru'
+
+###################################################################################
