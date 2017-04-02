@@ -205,15 +205,9 @@ STATICFILES_DIRST = [
 ############# CONFIG DJANGO SEND EMAIL AND REDUX-REGISTRATION #####################
 
 EMAIL_HOST = EMAIL_HOST
-
 EMAIL_HOST_USER = EMAIL_HOST_USER
-
 EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
-
 EMAIL_PORT = EMAIL_PORT
-
 EMAIL_USE_TLS = EMAIL_USE_TLS
-
-# DEFAULT_FROM_EMAIL = 'you_fucking@google.ru'
 
 ###################################################################################
