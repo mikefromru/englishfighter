@@ -7,7 +7,8 @@ class UserProfile(models.Model):
     avatar = models.ImageField(upload_to='avatars/', verbose_name='Изображения', blank=True, null=True)
 
     def __unicode__(self):
-        return self.user
+        return self.avatar
 
     class Meta:
-        verbose_name = 'Профили'
+        verbose_name = 'Профиль'
+        verbose_name_plural = 'Профили'
