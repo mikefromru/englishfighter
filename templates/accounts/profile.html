@@ -10,11 +10,11 @@
 </head>
 <body>
     <img src="{{ user.userprofile.avatar.url }}"/><br>
-    {{ user.userprofile.city }}
+    {{ user.get_full_name|default:user }}<br>
+    {{ user.userprofile.city }}<br>
+    <div style="color: grey">{{ user.userprofile.about }}</div>
     <hr>
     <a href="/accounts/password/change">Password change</a><br>
-    <!--<a href="{% url 'auth_password_change' %}">Password change</a><br>-->
-    <a href="/accounts/password/reset">Password reset</a><br>
 
 </body>
 </html>
