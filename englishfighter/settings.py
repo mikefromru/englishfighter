@@ -24,6 +24,7 @@ SECRET_KEY = '(uk6^)nq%sct#p4m2^3m_6(80v*1+&7t(+m!bg**hc-l*!pb!('
 
 #----
 # SECURITY WARNING: don't run with debug turned on in production!
+
 import socket
 
 if socket.gethostname() == 'online':
@@ -202,7 +203,7 @@ STATICFILES_DIRST = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 ############# CONFIG DJANGO SEND EMAIL AND REDUX-REGISTRATION #####################
