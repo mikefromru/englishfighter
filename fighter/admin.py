@@ -9,4 +9,7 @@
 #     def clean_username(self):
 #         username = self.cleaned-data['username']
 #         try:
-            
+from .models import UserProfile            
+from django.contrib import admin
+
+admin.site.register(UserProfile)

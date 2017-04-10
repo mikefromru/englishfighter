@@ -42,11 +42,11 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.sites',
+    # 'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'fighter',
-    'avatar',
+    # 'avatar',
     'accounts',
     'social_django',
     'registration',
@@ -194,13 +194,16 @@ SITE_ID = 1
 # https://docs.djangoproject.com/en/1.10/howto/static-files
 
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
-
+# PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+
 STATICFILES_DIRST = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = '/media/'
 
 ############# CONFIG DJANGO SEND EMAIL AND REDUX-REGISTRATION #####################
 
