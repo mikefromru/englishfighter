@@ -216,3 +216,4 @@ EMAIL_PORT = EMAIL_PORT
 EMAIL_USE_TLS = EMAIL_USE_TLS
 
 ###################################################################################
+AUTH_PROFILE_MODULE = 'accounts.UserProfile'

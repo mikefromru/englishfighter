@@ -9,13 +9,13 @@
     <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 <body>
-    <img src="{{ user.userprofile.avatar.url }}"/><br>
-    {{ user.get_full_name|default:user }}<br>
+    {% if user.userprofile.avatar %}
+        <img src="{{ user.userprofile.avatar.url }}" width="150" height="150"/><br>
+    {% endif %}
+    {{user.first_name}}
+    {{user.last_name}}
     {{ user.userprofile.city }}<br>
     <div style="color: grey">{{ user.userprofile.about }}</div>
-    <hr>
-    <a href="/accounts/password/change">Password change</a><br>
-
 </body>
 </html>
 {% endblock %}
