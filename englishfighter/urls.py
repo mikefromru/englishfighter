@@ -19,11 +19,16 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+from registration.forms import RegistrationFormUniqueEmail
+from registration.backends.default.views import RegistrationView
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('fighter.urls')),
     url(r'^fighter/', include('fighter.urls')),
     url(r'^avatar/', include('avatar.urls')),
+    url(r'^accounts/register/$',RegistrationView.as_view(form_class=RegistrationFormUniqueEmail),
+    name='registration_register'),
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^accounts/', include('django.contrib.auth.urls')),

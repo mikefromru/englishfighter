@@ -9,7 +9,6 @@ from django.contrib.auth.models import User
 from .forms import UserForm, ProfileForm
 from .models import UserProfile
 
-
 def profile(request):
     if not request.user.is_authenticated():
         return HttpResponseRedirect('/login')

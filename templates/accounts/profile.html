@@ -12,9 +12,8 @@
     {% if user.userprofile.avatar %}
         <img src="{{ user.userprofile.avatar.url }}" width="150" height="150"/><br>
     {% endif %}
-    {{user.first_name}}
-    {{user.last_name}}
     {{ user.userprofile.city }}<br>
+    {{ user.email }}
     <div style="color: grey">{{ user.userprofile.about }}</div>
 </body>
 </html>
