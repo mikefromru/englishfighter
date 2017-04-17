@@ -3,6 +3,7 @@
     position: fixed;
     top: 70px;
     right: 10px;
+    z-index: 100;
 }
 .modal-content {
     background-color: #fefefe;

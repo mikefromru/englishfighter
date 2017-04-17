@@ -1,20 +1,27 @@
 {% extends "fighter/base.html" %}
+{% load staticfiles %}
 {% load i18n %}
 
 {% block content %}
-<form method="post" action=".">
-  {% csrf_token %} 
-  {{ form.as_p }}
-
-  <input type="submit" value="{% trans 'Log in' %}" />
-  <input type="hidden" name="next" value="{{ next }}" />
-</form>
-<p>Вход через соц.сети</p>
-<a href="{% url 'social:begin' 'facebook' %}">Facebook</a>
-<a href="{% url 'social:begin' 'twitter' %}">Twitter</a>
-<a href="{% url 'social:begin' 'google-oauth2' %}">Google</a>
-<a href="{% url 'social:begin' 'vk-oauth2' %}">Vkontakte</a>
-
-<p>{% trans "Forgot password" %}? <a href="{% url 'auth_password_reset' %}">{% trans "Reset it" %}</a>!</p>
-<p>{% trans "Not member" %}? <a href="{% url 'registration_register' %}">{% trans "Register" %}</a>!</p>
+<div class="conteiner">
+  <p>Вход</p>
+  {% if form.errors %}
+    <strong>Неверное имя пользователя или пароль</strong>
+  {% endif %}
+  <form method="post" action="">
+    {% csrf_token %} 
+    <p><label for="id_username">Имя пользователя:</label></p>
+    <p><input autofocus="" id="id_username" maxlength="254" name="username" type="text" placeholder="Введите имя" required /></p>
+    <p><label for="id_password">Пароль:</label></p>
+    <p><input id="id_password" name="password" type="password" placeholder="Введите пароль" required /></p>
+    <button id="btnLogin" type="submit">Войти</button>
+  </form>
+  <p>Вход через соц.сети</p>
+  <a href="{% url 'social:begin' 'facebook' %}">Facebook</a>
+  <a href="{% url 'social:begin' 'twitter' %}">Twitter</a>
+  <a href="{% url 'social:begin' 'google-oauth2' %}">Google</a>
+  <a href="{% url 'social:begin' 'vk-oauth2' %}">Vkontakte</a>
+<p>{% trans "Забыли пароль" %}? <a href="{% url 'auth_password_reset' %}">{% trans "Reset it" %}</a>!</p>
+<p>Нет аккаунта?<a href="{% url 'registration_register' %}">{% trans "Register" %}</a>!</p>
+</div>
 {% endblock %}

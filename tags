@@ -127,7 +127,7 @@ dependencies	fighter/migrations/0001_initial.py	/^    dependencies = [$/;"	kind:
 dependencies	fighter/migrations/0002_auto_20170410_0530.py	/^    dependencies = [$/;"	kind:variable	line:10
 dependencies	fighter/migrations/0003_auto_20170410_1422.py	/^    dependencies = [$/;"	kind:variable	line:10
 dependencies	fighter/migrations/0004_auto_20170411_1129.py	/^    dependencies = [$/;"	kind:variable	line:10
-editing_profile	accounts/views.py	/^def editing_profile(request):$/;"	kind:function	line:20
+editing_profile	accounts/views.py	/^def editing_profile(request):$/;"	kind:function	line:19
 field	accounts/migrations/0002_auto_20170411_1745.py	/^            field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='userprofile', to=settings.AUTH_USER_MODEL),$/;"	kind:variable	line:20
 field	accounts/migrations/0003_auto_20170411_1850.py	/^            field=models.CharField(blank=True, max_length=30),$/;"	kind:variable	line:25
 field	accounts/migrations/0003_auto_20170411_1850.py	/^            field=models.ImageField(blank=True, default=django.utils.timezone.now, upload_to='avatars\/', verbose_name='Изображения'),$/;"	kind:variable	line:19
@@ -138,7 +138,7 @@ field	accounts/migrations/0007_auto_20170411_2030.py	/^            field=models.
 field	fighter/migrations/0002_auto_20170410_0530.py	/^            field=models.ImageField(blank=True, null=True, upload_to='avatars\/', verbose_name='Изображения'),$/;"	kind:variable	line:18
 field	fighter/migrations/0003_auto_20170410_1422.py	/^            field=models.TextField(blank=True),$/;"	kind:variable	line:22
 fields	accounts/forms.py	/^        fields = ('city', 'about', 'avatar')$/;"	kind:variable	line:13
-fields	accounts/forms.py	/^        fields = ('first_name', 'last_name')$/;"	kind:variable	line:8
+fields	accounts/forms.py	/^        fields = ('first_name', 'last_name', 'email')$/;"	kind:variable	line:8
 fields	accounts/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:21
 fields	fighter/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:21
 forms.py	accounts/forms.py	1;"	kind:file	line:1
@@ -171,6 +171,7 @@ name	accounts/migrations/0004_auto_20170411_2002.py	/^            name='avatar',
 name	accounts/migrations/0005_auto_20170411_2010.py	/^            name='avatar',$/;"	kind:variable	line:17
 name	accounts/migrations/0006_auto_20170411_2011.py	/^            name='avatar',$/;"	kind:variable	line:17
 name	accounts/migrations/0007_auto_20170411_2030.py	/^            name='avatar',$/;"	kind:variable	line:18
+name	englishfighter/urls.py	/^    name='registration_register'),$/;"	kind:variable	line:31
 name	fighter/apps.py	/^    name = 'fighter'$/;"	kind:variable	line:5
 name	fighter/migrations/0001_initial.py	/^            name='UserProfile',$/;"	kind:variable	line:20
 name	fighter/migrations/0002_auto_20170410_0530.py	/^            name='avatar',$/;"	kind:variable	line:17
@@ -194,14 +195,14 @@ options	fighter/migrations/0001_initial.py	/^            options={$/;"	kind:vari
 options	fighter/migrations/0003_auto_20170410_1422.py	/^            options={'verbose_name': 'Профиль', 'verbose_name_plural': 'Профили'},$/;"	kind:variable	line:17
 preserve_default	accounts/migrations/0003_auto_20170411_1850.py	/^            preserve_default=False,$/;"	kind:variable	line:20
 preserve_default	accounts/migrations/0007_auto_20170411_2030.py	/^            preserve_default=False,$/;"	kind:variable	line:20
-profile	accounts/views.py	/^def profile(request):$/;"	kind:function	line:13
+profile	accounts/views.py	/^def profile(request):$/;"	kind:function	line:12
 save_user_profile	accounts/models.py	/^def save_user_profile(sender, instance, **kwargs):$/;"	kind:function	line:25
 settings.py	englishfighter/settings.py	1;"	kind:file	line:1
 settings_local.py	englishfighter/settings_local.py	1;"	kind:file	line:1
 tests.py	accounts/tests.py	1;"	kind:file	line:1
 tests.py	fighter/tests.py	1;"	kind:file	line:1
 urlpatterns	accounts/urls.py	/^urlpatterns = [$/;"	kind:variable	line:4
-urlpatterns	englishfighter/urls.py	/^urlpatterns = [$/;"	kind:variable	line:22
+urlpatterns	englishfighter/urls.py	/^urlpatterns = [$/;"	kind:variable	line:25
 urlpatterns	fighter/urls.py	/^urlpatterns = [$/;"	kind:variable	line:4
 urls.py	accounts/urls.py	1;"	kind:file	line:1
 urls.py	englishfighter/urls.py	1;"	kind:file	line:1

@@ -1,14 +1,29 @@
 {% extends 'fighter/base.html' %}
 {% block content %}
-<h3>Настройки профиля</h3>
-<a href="none">something</a>
-<a href="none">here is something</a><br>
-<a href="/accounts/password_change">Изменить пароль</a>
-<br>
-<form action="" method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ userform.as_p }}
-    {{ profileform.as_p }}
-    <input type="submit" id="save" name='save' value="Сохранить">
-</form>
+<div class="conteiner">
+    <h3>Настройки профиля</h3>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p><label for="id_first_name">Имя:</label></p>
+        <p><input id="id_first_name" maxlength="30" name="first_name" type="text" value="{{user.first_name}}" /></p>
+        <p><label for="id_last_name">Фамилия:</label></p>
+        <p><input id="id_last_name" maxlength="30" name="last_name" type="text" value="{{user.last_name}}"/></p>
+        <p><label for="id_email">Адрес электронной почты:</label></p>
+        <p><input id="id_email" maxlength="254" name="email" type="email" value="{{ user.email }}" /></p>
+        <p><label for="id_city">Город:</label></p>
+        <p><input id="id_city" maxlength="30" name="city" type="text" value="{{ user.userprofile.city }}" /></p>
+        <p><label for="id_about">О себе:</label></p> <textarea cols="40" id="id_about" name="about" rows="5">
+{{ user.userprofile.about }}</textarea></p>
+        <p><label for="id_avatar">Изображения:</label></p>
+        {% if user.userprofile.avatar %}
+            <p>На данный момент: <img src="{{ user.userprofile.avatar.url }}" width="50" height="50">
+            <input class="clear_file" id="avatar-clear_id" name="avatar-clear" type="checkbox" />
+            <label for="avatar-clear_id">Очистить</label></p>
+        {% endif %}
+        <p>Изменить: <input class="show_file" id="id_avatar" name="avatar" type="file" /></p>
+
+        <button id="btnLogin" type="submit">Сохранить</button>
+    </form>
+    
+</div>
 {% endblock %}

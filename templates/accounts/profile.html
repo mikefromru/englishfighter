@@ -1,20 +1,32 @@
 {% extends 'fighter/base.html' %}
 {% load staticfiles %}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
-</head>
-<body>
+<!--<div class="conteiner">-->
+<center>
+<div>
     {% if user.userprofile.avatar %}
         <img src="{{ user.userprofile.avatar.url }}" width="150" height="150"/><br>
     {% endif %}
-    {{ user.userprofile.city }}<br>
-    {{ user.email }}
-    <div style="color: grey">{{ user.userprofile.about }}</div>
-</body>
-</html>
+    <p>{{ user.userprofile.city }}</p>
+    <p>{{ user.email }}</p>
+    <!--<p><div style="color: grey">{{ user.userprofile.about }}</div></p>-->
+    <p><div id="_about" style="color: grey"></div></p>
+</div>
+</center>
+<!--<a id="with_right" href="#">-->
+    <!--<p>Hello! My name is just user</p>-->
+<!--</a>-->
+    <script>
+    var $id_about = document.getElementById("_about")
+        var bar = "{{user.userprofile.about}}"
+        var arr = bar.split(" ")
+        var text = ""
+        var start = 0
+        var end = 10
+        while(arr.length > 0) {
+            var elem5 = arr.splice(start, end)
+            text += elem5.join(" ") + "<br />"
+        }
+        $id_about.innerHTML = text 
+    </script>
 {% endblock %}
