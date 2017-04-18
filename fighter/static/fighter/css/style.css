@@ -9,7 +9,7 @@
     background-color: #33485F;
 }
 
-#nav li a {
+#point, #nav li a {
     margin-top: 15px;
     float: left;
     display: block;
@@ -18,7 +18,6 @@
     font-weight: bold;
     color: #ccc;
     outline: none;
-    /*border-right: 1px solid #ccc;*/
 }
 
 #nav li a:hover {
@@ -32,4 +31,21 @@
 
 body {
     margin: 0;
+}
+#point {
+    width: 100px;
+    /*padding: 0px;*/
+    font-size: 16px;
+    /*padding: 5px;*/
+    color: #8291A3;
+    background-color:#2B3D52;
+    border-radius: 19px;
+}
+
+#points {
+    font-size: 16px;
+    position: relative;
+    top: -3px;
+    left: 10px;
+    display: inline-block;
 }
