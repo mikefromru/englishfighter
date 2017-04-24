@@ -1,0 +1,88 @@
+{% extends "fighter/base.html" %}
+{% block content %}
+<!--<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>-->
+<div id="block">
+<!--<body style="background-color: #2B3D52">-->
+    <!--<center style="color: aliceblue">-->
+    <center>
+    <p style="color: red">{{ message }}</p>
+        {{ stack.russia }}<br />
+        {{ stack.english }}
+
+    <form>
+    <br>
+        <input id="text" name="q" type="text" autocomplete="off" autofocus="on"><br />
+        <input type="submit" onclick="foo()" class="btnInViews" value="send">
+    </form>
+    </center>
+    </div>
+    
+    <script>
+    function foo() {
+        var en = "{{stack.english}}"
+        var myen = document.getElementById("text").value
+        console.log(myen, 'here is myen')
+        if(en == myen){
+            console.log("good")
+            alert('good')
+            $.post("", "csrfmiddlewaretoken={{ csrf_token }}")
+
+        }else{
+            console.log("no")
+            alert('no')
+        }
+    }
+    </script>
+
+
+
+    <!--<script>
+    // function foo() {
+        var text = document.getElementById('text').value
+        console.log(text, "hello world")
+        var english = "{{ stack.english }}"
+        if(text == english) {
+            console.log("right")
+            alert('good')
+            $(document).ready(function() {
+                $("#myform").submit(function(){
+                    $.ajax({
+                        url: "/lesson_one/",
+                        type: "POST",
+                        data: $("#myform").serialize(),
+                        success: function(html) {
+                            alert("I am Ajax who is good")
+                            $("#block").html(html);
+                            $('#myform')[0].reset();
+                        },
+                    });
+                    return false;
+                });
+            });
+            // location.reload()
+        }else{
+            // console.log("wrong")
+            alert('no')
+            // location.reload()
+            $(document).ready(function() {
+                $("#myform").submit(function(){
+                    $.ajax({
+                        url: "/lesson_one/",
+                        type: "POST",
+                        data: $("#myform").serialize(),
+                        success: function(html) {
+                            alert("I am Ajax who is no")
+                            $("#block").html(html);
+                            $('#myform')[0].reset();
+                        },
+                    });
+                    return false;
+                });
+            });
+
+        }
+    // }
+
+
+    </script>-->
+{% endblock %}

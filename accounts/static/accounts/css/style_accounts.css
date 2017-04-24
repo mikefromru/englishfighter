@@ -1,5 +1,6 @@
 .conteiner {
     margin-left: 15px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 input {
@@ -12,7 +13,8 @@ input {
     border:1px solid #cccccc;
     border-radius: 3px;
     background: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    /*box-shadow: 0 0 7px #666;*/
 }
 input:focus {
     color: black;
@@ -25,18 +27,20 @@ input:focus {
     border: 0;
     border-radius: 5px;
     color: white;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 5%;
     background-color: #33485F;
     width: 100px;
-    height: 30px;
-    font-size: 20px;
+    height: 40px;
+    font-size: 16px;
 }
 #btnLogin:hover {background-color: #2B3D52}
 
 label {
+    font-family: Arial, Helvetica, sans-serif;
     position: relative;
     top: 10px;
+    /*box-shadow: 0 0 7px #666;*/
 }
 
 /*edition profile*/
@@ -49,8 +53,7 @@ label {
     border:1px solid #cccccc;
     border-radius: 3px;
     background: white;
-    font-famil
-
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .clear_file {
@@ -84,4 +87,7 @@ label {
 }
 #with_right:hover {
     border: 5px solid #E7E7E7;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }

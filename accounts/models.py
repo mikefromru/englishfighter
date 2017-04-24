@@ -5,6 +5,7 @@ from django.dispatch import receiver
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, related_name='userprofile')
+    points = models.IntegerField(default=0)
     city = models.CharField(max_length=30, blank=True)
     about = models.TextField(blank=True)
     avatar = models.ImageField(upload_to='avatars/', verbose_name='Изображения', blank=True)

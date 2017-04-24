@@ -1,0 +1,6 @@
+BBBBBBB BBBBBBBBBBBBBBBBBBB
+BBBB BBBB
+
+BBBBB BBBBBBB
+XXX gettext(u'Your account is now activated.') XXXX
+BBBBBBBB

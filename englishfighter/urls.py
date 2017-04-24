@@ -22,6 +22,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from registration.forms import RegistrationFormUniqueEmail
 from registration.backends.default.views import RegistrationView
 
+from django.conf.urls.i18n import i18n_patterns
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('fighter.urls')),
@@ -34,4 +36,3 @@ urlpatterns = [
     url(r'^accounts/', include('django.contrib.auth.urls')),
     url('', include('social_django.urls', namespace='social')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-

@@ -4,26 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <title>English Fighter</title>
-    <link rel="stylesheet" href="{% static 'fighter/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'fighter/css/style_fighter.css' %}">
     <link rel="stylesheet" href="{% static 'fighter/css/modal_window_profile.css' %}">
     <link rel="stylesheet" href="{% static 'accounts/css/style_accounts.css' %}">
     <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
 </head>
 <body>
     <ul id="nav">
-        <li><a style="padding-top: 0%" href="/fighter/demo"><img src="{% static 'fighter/img/mainpicture.png' %}" width="50" height="40"></li></a>
-    <!--<li><a style="padding-top: 0%" href="/fighter/demo"><img src="{% static 'fighter/img/new_boxing.jpeg' %}" width="60" height="40"></li></a>-->
+        <!--<li><a style="padding-top: 0%" href="/fighter/demo"><img class="round" src="{% static 'fighter/img/logo1_copy.jpeg' %}" width="45" height="45"></li></a>-->
         <li><a href="/fighter/demo">ENGLISH FIGHTER</a></li>
         {% if user.is_anonymous %}
             <!--<li><a href="/accounts/register">Регистрация</a></li>-->
         {% endif %}
             {% if user.is_authenticated %}
-    <!--<li><a style="position: absolute; right: 55px; padding-top: 0%;" href="/fighter/demo"><img src="{{user.userprofile.avatar.url}}" width="60" height="40"></li></a>-->
-            <li><div id="point"><img src="{% static 'fighter/img/moneta.jpg' %}" width="20" height="20"><div id="points">10.100</div></li>
+            <li><div id="point"><img src="{% static 'fighter/img/moneta.jpg' %}" width="20" height="20"><div id="points">{{ user.userprofile.points }}</div></li>
             {% endif %}
-        <div class="profile_log">
+        <div id="nav2">
             {% if user.userprofile %}
-                    <li><a id="mylink" href="#win">{{ user.get_full_name|default:user }}</a></li>
+
+                    {% if user.userprofile.avatar %}
+                        <li><a id="mylink" href="#win">{{ user.get_full_name|default:user }}
+                        <div id="picture"><img class="round" src="{{user.userprofile.avatar.url}}" width="40" height="40"></div></a></li>
+                    {% else %}
+                        <li><a id="mylink" href="#win">{{ user.get_full_name|default:user }}</a></li>
+                    {% endif %}
+
                     <div class="modal" id="MyModal">
                         <div class="modal-content">
                             {% if user.userprofile.avatar %}

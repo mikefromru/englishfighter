@@ -1,14 +1,14 @@
 {% extends 'fighter/base.html' %}
 {% load staticfiles %}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body style="background-color: #2B3D52">
-    <center style="color: white">The Page of A Developer</center>
+<body style="background-color: #2B3D52; color: aliceblue">
+    <center><p>The app is developing</p></center>
+    <div class="lessonstart" onclick="location.href='/lesson_one/';">
+        <span>First lesson</span>
+    </div><br />
+
+    <div class="lessonstart" onclick="location.href='/lesson_two/';">
+        <span>Second lesson</span>
+    </div><br />
 </body>
-</html>
 {% endblock %}

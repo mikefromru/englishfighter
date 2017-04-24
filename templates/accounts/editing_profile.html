@@ -10,6 +10,11 @@
         <p><input id="id_last_name" maxlength="30" name="last_name" type="text" value="{{user.last_name}}"/></p>
         <p><label for="id_email">Адрес электронной почты:</label></p>
         <p><input id="id_email" maxlength="254" name="email" type="email" value="{{ user.email }}" /></p>
+
+
+        <p><label for="id_points">Ваши очки:</label></p>
+        <p><input id="id_points" maxlength="254" name="points" type="text" value="{{ user.userprofile.points }}" /></p>
+
         <p><label for="id_city">Город:</label></p>
         <p><input id="id_city" maxlength="30" name="city" type="text" value="{{ user.userprofile.city }}" /></p>
         <p><label for="id_about">О себе:</label></p> <textarea cols="40" id="id_about" name="about" rows="5">
