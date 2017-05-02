@@ -1,88 +1,188 @@
 {% extends "fighter/base.html" %}
 {% block content %}
-<!--<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>-->
-<div id="block">
-<!--<body style="background-color: #2B3D52">-->
-    <!--<center style="color: aliceblue">-->
-    <center>
-    <p style="color: red">{{ message }}</p>
-        {{ stack.russia }}<br />
-        {{ stack.english }}
-
-    <form>
-    <br>
-        <input id="text" name="q" type="text" autocomplete="off" autofocus="on"><br />
-        <input type="submit" onclick="foo()" class="btnInViews" value="send">
-    </form>
-    </center>
-    </div>
-    
-    <script>
-    function foo() {
-        var en = "{{stack.english}}"
-        var myen = document.getElementById("text").value
-        console.log(myen, 'here is myen')
-        if(en == myen){
-            console.log("good")
-            alert('good')
-            $.post("", "csrfmiddlewaretoken={{ csrf_token }}")
-
-        }else{
-            console.log("no")
-            alert('no')
-        }
-    }
-    </script>
-
-
 
     <!--<script>
-    // function foo() {
+        $(document).ready(function(){
+            $('#block').toggle(1000);
+        })        
+    </script>-->
+<!--<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>-->
+
+<!--<script>-->
+    <!--// $(document).ready(function() {-->
+        <!--$("#block").css("display", "none");-->
+        <!--// $("#block").fadeToggle(1000);-->
+        <!--// setTimeout("$('#block').fadeIn('drop');", 200);-->
+        <!--// $("#block").fadeIn(800);-->
+    <!--// });-->
+<!--</script>-->
+
+
+<body style="background: #D4D4D4">
+
+<script>
+    function setFocus() {
+        document.getElementById("text").focus();
+    }
+    setFocus()
+</script>
+
+<div id="block">
+    <center>
+    <p style="color: red">{{ message }}</p>
+    <div id="showRU" class="sentence">
+        {{ stack.russia }}<br />
+    </div>
+
+    <form id="myform" onsubmit="foo(); return false;" name='myform' >{% csrf_token %}
+        <p><input id="text" name="field" type="text" autocomplete="off" autofocus="on"></p>
+        <!--<p><button class="btnInViews">Send</button></p>-->
+    </form>
+
+<style>
+    #btn {
+        
+        margin-left: 25%; margin-right: auto;
+    }
+</style>
+
+    <script>
+        var listBtns = "{{ stack.buttons }}".split(' ')
+
+        var d = document.createElement('div')
+        var br = document.createElement('br')
+
+        d.style.width = "850px" //'510px'
+        d.style.height = "250px" //'70px'
+        d.style.margin = 'auto'
+
+        for (var x = 0; x < listBtns.length; x++) {
+            var btn = document.createElement('input');
+            // var br = document.createElement('br');
+            btn.id = 'b' + x;
+            btn.value = listBtns[x]
+            btn.type = 'button'
+            btn.style.width = '150px'
+            btn.style.height = '50px'
+            btn.style.margin = '10px'
+            btn.className = "btns"
+            d.appendChild(btn)
+
+            // if ((x - 4) %4 == 0)  {
+                // document.querySelector('body').appendChild(btn)
+                // document.querySelector('body').appendChild(br)
+            // }
+
+            // document.body.appendChild(btn)
+            document.body.appendChild(br)
+            document.body.appendChild(d)
+        
+            btn.addEventListener('click', function() {
+                var valueForm = myform.field.value += ' ' + this.value;
+                var newValueFormFormat = $.trim(valueForm)
+                var text = document.getElementById('text').value
+                var english = "{{ stack.english }}"
+                var russia = "{{ stack.russia }}".split(' ')
+
+                var lenVFF = newValueFormFormat.split(' ')
+                var splitEnglish = english.split(' ')
+
+                if($.trim(text)  == english) {
+                    alert('good')
+                    $(document).ready(function() {
+                        $.ajax({
+                            url: "",
+                            type: "POST",
+                            data: $("#myform").serialize(),
+                            success: function(html) {
+                                $("body").html(html)
+                                $("#myform")[0].reset()
+                            }
+                        })
+                    })
+
+                }else if(lenVFF.length >= splitEnglish.length) {
+                    alert('no')
+                    $(document).ready(function() {
+                        $.ajax({
+                            url: "",
+                            type: "GET",
+                            data: $("#myform").serialize(),
+                            success: function(html) {
+                                $("body").html(html)
+                                $("#myform")[0].reset()
+                            }
+                        })
+                    })
+                }
+            })
+        }
+
+    </script>
+
+    </center>
+    </div>
+
+
+</body>
+{% endblock %}
+
+    <!--<script>
+    function foo() {
+    
+        var valueForm = myform.field.value
+        var newValueFormFormat = $.trim(valueForm)
         var text = document.getElementById('text').value
-        console.log(text, "hello world")
         var english = "{{ stack.english }}"
-        if(text == english) {
-            console.log("right")
+
+        if($.trim(text) == english) {
             alert('good')
             $(document).ready(function() {
-                $("#myform").submit(function(){
                     $.ajax({
-                        url: "/lesson_one/",
+                        url: "",
                         type: "POST",
                         data: $("#myform").serialize(),
                         success: function(html) {
-                            alert("I am Ajax who is good")
-                            $("#block").html(html);
+                            $("body").html(html);
                             $('#myform')[0].reset();
                         },
                     });
                     return false;
-                });
             });
-            // location.reload()
         }else{
-            // console.log("wrong")
             alert('no')
-            // location.reload()
             $(document).ready(function() {
-                $("#myform").submit(function(){
                     $.ajax({
-                        url: "/lesson_one/",
-                        type: "POST",
+                        url: "",
+                        type: "GET",
                         data: $("#myform").serialize(),
                         success: function(html) {
-                            alert("I am Ajax who is no")
-                            $("#block").html(html);
+                            $("body").html(html);
                             $('#myform')[0].reset();
                         },
                     });
                     return false;
                 });
-            });
-
         }
-    // }
-
+    }
 
     </script>-->
-{% endblock %}
+    <!--<script>
+        $(document).ready(function() {
+            $('#myform').submit(function() {
+                $.ajax({
+                    url: "",
+                    type: "POST",
+                    // data: "csrfmiddlewaretoken={{ csrf_token }}",
+                    data: $('#myform').serialize(),
+                    success: function(html) {
+                        // $("#showRU").html("{{ stack.russia }}")
+                        $("body").html(html)
+                        $('#myform')[0].reset();
+                    }
+                })
+                return false;
+            })
+        })
+        
+    </script>-->

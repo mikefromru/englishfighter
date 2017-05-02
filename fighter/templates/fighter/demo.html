@@ -1,14 +1,74 @@
 {% extends 'fighter/base.html' %}
 {% load staticfiles %}
 {% block content %}
-<body style="background-color: #2B3D52; color: aliceblue">
-    <center><p>The app is developing</p></center>
-    <div class="lessonstart" onclick="location.href='/lesson_one/';">
-        <span>First lesson</span>
-    </div><br />
 
-    <div class="lessonstart" onclick="location.href='/lesson_two/';">
-        <span>Second lesson</span>
-    </div><br />
+<script>
+    $(window).ready(function() {
+        setTimeout("$('.lessonstart').fadeIn('slow');", 200);
+    })
+</script>
+
+<body class="bodycolor">
+
+    <center><p>The app is developing</p></center>
+    <div class="wrap">
+        <div class="lessonstart" onclick="location.href='/lesson_one/';">
+            <div class="color">First lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='/lesson_two/';">
+            <div class="color">Second lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">Third lesson</div>
+        </div>
+    </div>
+  
+    <div class="wrap">
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">Fourth lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">Fifth lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">Sixth lesson</div>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">Seventh lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">Eighth lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">Ninth lesson</div>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">Tenth lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">The eleventh lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">The twelfth lesson</div>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">The thirteenth lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">The fourteenth lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">The fifteenth lesson</div>
+        </div>
+    </div>
 </body>
 {% endblock %}

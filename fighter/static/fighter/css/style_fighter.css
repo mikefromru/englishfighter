@@ -46,10 +46,18 @@
     top: -30px;
 }
 
+.bodycolor {
+    background-color: #2B3D52;
+    color: #ccc;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 #point {
     width: 100px;
     font-size: 16px;
@@ -89,22 +97,66 @@ body {
 }
 .btnInViews:hover {background-color: #2B3D52}
 
+
 .lessonstart {
-    top: 0px; right: 0; bottom: 0; left: 0; margin: auto;
+    display: none;
+    /*top: 0px; right: 0; bottom: 0; left: 0; margin: auto;*/
+    /*float: left;*/
     border: 0px;
-    width: 300px;
-    height: 70px;
-    color: blue;
+    width: 500px;
+    height: 100px;
+    color: white;
     background: white;
     cursor: pointer;
+    float: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
 }
 
-.lessonstart span {
-    text-align: center;
-    display: table-cell;
-    height: 100%;
-    width: 100%;
-    color: #666;
+.lessonstart:hover {
+    position: relative;
+    -webkit-transition: margin 0.5s ease-out;
+    -moz-transition: margin 0.5s ease-out;
+    -o-transition: margin 0.5s ease-out;
+    bottom: 5px;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+@media screen and (max-width: 1600px) {
+    .wrap {
+        padding-right: 295px;
+        padding-left: 295px;
+    }
+    .lessonstart {
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .wrap {
+        display: flex;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+.sentence {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/******************* This is colors in tags **************/
+.color {
+    background: linear-gradient(to right, #22CACE, #36B8D0);
+    height: 50%;
 }
