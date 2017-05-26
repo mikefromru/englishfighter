@@ -3,12 +3,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-input {
+input[type='text'], input[type="email"], input[type='password'] {
     /*text-indent: 1%;*/
     padding-left: 10px;
     height: 40px;
     width: 30%;
-    font-size: 25;
+    font-size: 18px;
     outline: none;
     border:1px solid #cccccc;
     border-radius: 3px;
@@ -16,10 +16,22 @@ input {
     font-family: Arial, Helvetica, sans-serif;
     /*box-shadow: 0 0 7px #666;*/
 }
-input:focus {
+
+input[type="text"]:focus {
     color: black;
     border: 1px solid deepskyblue; 
 }
+
+input[type="password"]:focus {
+    color: black;
+    border: 1px solid deepskyblue; 
+} 
+
+input[type="email"]:focus {
+    color: black;
+    border: 1px solid deepskyblue; 
+}
+
 
 #btnLogin {
     outline: none;

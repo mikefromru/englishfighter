@@ -18,7 +18,7 @@
 <!--</script>-->
 
 
-<body style="background: #D4D4D4">
+<body style="background: #2B3D52">
 
 <script>
     function setFocus() {
@@ -39,21 +39,14 @@
         <!--<p><button class="btnInViews">Send</button></p>-->
     </form>
 
-<style>
-    #btn {
-        
-        margin-left: 25%; margin-right: auto;
-    }
-</style>
-
     <script>
         var listBtns = "{{ stack.buttons }}".split(' ')
 
         var d = document.createElement('div')
         var br = document.createElement('br')
 
-        d.style.width = "850px" //'510px'
-        d.style.height = "250px" //'70px'
+        d.style.width = "780px" //'510px'
+        d.style.height = "70px" //'70px'
         d.style.margin = 'auto'
 
         for (var x = 0; x < listBtns.length; x++) {
@@ -62,15 +55,12 @@
             btn.id = 'b' + x;
             btn.value = listBtns[x]
             btn.type = 'button'
-            btn.style.width = '150px'
-            btn.style.height = '50px'
-            btn.style.margin = '10px'
             btn.className = "btns"
             d.appendChild(btn)
 
             // if ((x - 4) %4 == 0)  {
-                // document.querySelector('body').appendChild(btn)
-                // document.querySelector('body').appendChild(br)
+            //     document.querySelector('body').appendChild(btn)
+            //     document.querySelector('body').appendChild(br)
             // }
 
             // document.body.appendChild(btn)

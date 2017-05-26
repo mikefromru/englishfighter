@@ -38,6 +38,13 @@ def lesson_two(request):
         'stack': stack,
         'message': message})
 
+def tmp(request):
+    stack = LessonOne.objects.order_by('?')[0]
+    if request.method == "POST":
+        return HttpResponseRedirect('/tmp')
+    return render(request, 'fighter/tmp.html', {
+        'stack': stack})
+
 # stack_lesson_one = LessonOne.objects.order_by('?')[0]
 # def lesson_one(request):
 #     # global stack_lesson_one

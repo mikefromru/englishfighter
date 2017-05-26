@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^demo/$', demo),
     url(r'^lesson_one', lesson_one),
     url(r'^lesson_two', lesson_two),
+    url(r'^tmp/$', tmp),
 ]

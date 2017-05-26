@@ -155,6 +155,29 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+a {
+    outline: none;
+}
+
+/*the buttons in lesson of template*/
+.btns {
+    border: 1px;
+    background-color: white;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+    width: 130px;
+    height: 40px;
+    margin: 10px;
+    outline: none;
+}
+
+.btns:focus{
+    border: 0px solid green; 
+    outline: none;
+}
+
 /******************* This is colors in tags **************/
 .color {
     background: linear-gradient(to right, #22CACE, #36B8D0);
