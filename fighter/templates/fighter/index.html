@@ -1,83 +1,76 @@
+{% extends 'fighter/base.html' %}
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+{% block content %}
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+    $(window).ready(function() {
+        setTimeout("$('.lessonstart').fadeIn('slow');", 200);
+    })
+</script>
 
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <link rel="stylesheet" href="{% static 'fighter/css/index.css' %}">
-    <link rel="stylesheet" href="{% static 'fighter/css/alert_register.css' %}">
-    <link rel="stylesheet" href="{% static 'fighter/css/jquery-confirm.css' %}">
-    <script src="/static/fighter/js/jquery-confirm.js"></script>
+<body class="bodycolor">
 
-    <script rel="stylesheet" src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
-
-    <script src="http://malsup.github.com/jquery.form.js"></script> 
-</head>
-
-<body>
-    <div id="content">
-    <h3>ENGLISH FIGHTER</h3>
-    <a class='colorA' id="go"><button class="btn_login">Войти</button></a>
-
-    
-    <div id="modal_form"> Сaмo oкнo  -->
-        <div id="stupidFon">ВХОД</div>
-      <span id="modal_close">X</span>  Кнoпкa зaкрыть  
-
-      <form id="loginform">{% csrf_token %}
-      <form id="loginform" action="" method="POST">{% csrf_token %}
-      <br><br><br>
-
-
-          <label>Имя или E-mail</label><br> 
-          <input id="user" type="text" name="username"><br>
-
-
-          <label>Пароль</label><br>
-          <input id="pass" type='password' name="password"><br><br>
-
-
-
-          <a id="forgot_pass" href="#">Забыли пароль</a>
-          <hr/>
-          <input id="btn_alert_reg" type="submit" name="login" value="Регистрация">
-          <input id="btn_alert_log" type="submit" name="login" value="ВОЙТИ">
-          <input id="btn_alert_log" type="submit" onclick="foo()" name="login" value="ВОЙТИ">
-      </form>
+    <p><a href="/tmp">tmp</a></p>
+    <p><a href="/tmp_two">tmp_two</a></p>
+    <center><p>The app is developing</p></center>
+    <div class="wrap">
+        <div class="lessonstart" onclick="location.href='/lesson_one/';">
+            <div class="color">First lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='/lesson_two/';">
+            <div class="color">Second lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">Third lesson</div>
+        </div>
     </div>
-    <div id="overlay"></div> <!-- Пoдлoжкa -->
+  
+    <div class="wrap">
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">Fourth lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">Fifth lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">Sixth lesson</div>
+        </div>
     </div>
 
-    <script src="/static/fighter/js/alert_register.js"></script>
-    <script src="/static/fighter/js/check_login_form.js"></script>
+    <div class="wrap">
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">Seventh lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">Eighth lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">Ninth lesson</div>
+        </div>
+    </div>
 
-<!--<p><a href="#modal1" class="open_modal">Ссылка с окном 1</a></p>
-<div id="modal1" class="modal_div">
-    <span class="modal_close">X</span>
-    <form action="" method="POST">{% csrf_token %}
-    {{form.as_p}}
-    <p>My name is alert</p>
-    <input type="submit" value="Send">
-    </form>
-</div>
-<div id="overlay"></div>-->
+    <div class="wrap">
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">Tenth lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">The eleventh lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">The twelfth lesson</div>
+        </div>
+    </div>
 
- <!--######################################################################-->
-     <!--<p><a class="demo-1">ALERT</a></p>-->
-     <!--<script>
-//         $('.demo-1').on('click', function(){$.alert({
-//             title: 'Attention',
-//             animation: 'scale',
-//             content: 'hello world'
-//         });});
-//     </script>-->
-
+    <div class="wrap">
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">The thirteenth lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">The fourteenth lesson</div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div class="color">The fifteenth lesson</div>
+        </div>
+    </div>
 </body>
-</html>
+{% endblock %}

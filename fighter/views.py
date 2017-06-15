@@ -3,15 +3,21 @@ from django.contrib.auth.models import User
 from accounts.models import UserProfile
 from fighter.models import LessonOne 
 
-import platform
-
 # from django.views.decorators.csrf import csrf_exempt
 
-def demo(request):
-    return render(request, 'fighter/demo.html')
+def index(request):
+    return render(request, 'fighter/index.html')
+
+def myadmin(request):
+    """Enter is only SUPERUSER"""
+    if request.user.is_superuser:
+        return render(request, 'fighter/myadmin.html')
+    return HttpResponseRedirect('/')
 
 # @csrf_exempt
 def lesson_one(request):
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/accounts/login')
     message = "The lesson number 1"
     stack = LessonOne.objects.order_by('?')[0]
 
@@ -27,6 +33,8 @@ def lesson_one(request):
         'message': message})
 
 def lesson_two(request):
+    if not request.user.is_authenticated():
+        return HttpResponseRedirect('/accounts/login')
     message = 'The lesson number 2'
     stack = LessonOne.objects.order_by('?')[0]
     if request.method == "POST":
@@ -39,11 +47,34 @@ def lesson_two(request):
         'message': message})
 
 def tmp(request):
+    message = "The lesson TMP"
     stack = LessonOne.objects.order_by('?')[0]
+
     if request.method == "POST":
-        return HttpResponseRedirect('/tmp')
+        profile = UserProfile.objects.get(user=request.user)
+        profile.points += 2
+        profile.save()
+        return HttpResponseRedirect("/tmp")
+        print("hello++++++++++++++")
+
     return render(request, 'fighter/tmp.html', {
-        'stack': stack})
+        'stack': stack,
+        'message': message})
+
+
+def tmp_two(request):
+    return render(request, 'fighter/tmp_two.html')
+
+
+    # stack = LessonOne.objects.order_by('?')[0]
+    # if request.method == "POST":
+    #     return HttpResponseRedirect('/tmp')
+    # return render(request, 'fighter/tmp.html', {
+    #     'stack': stack})
+
+
+
+
 
 # stack_lesson_one = LessonOne.objects.order_by('?')[0]
 # def lesson_one(request):

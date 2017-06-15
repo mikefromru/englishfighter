@@ -17,7 +17,6 @@
     <!--// });-->
 <!--</script>-->
 
-
 <body style="background: #2B3D52">
 
 <script>
@@ -35,144 +34,20 @@
     </div>
 
     <form id="myform" onsubmit="foo(); return false;" name='myform' >{% csrf_token %}
-        <p><input id="text" name="field" type="text" autocomplete="off" autofocus="on"></p>
-        <!--<p><button class="btnInViews">Send</button></p>-->
+        <input id="text" name="field" type="text" autocomplete="off" autofocus="on">
     </form>
+    <button class="btnInViews" onclick="dell_word()">Dell</button>
 
+    <div id="_buttons"></div>
     <script>
         var listBtns = "{{ stack.buttons }}".split(' ')
-
-        var d = document.createElement('div')
-        var br = document.createElement('br')
-
-        d.style.width = "780px" //'510px'
-        d.style.height = "70px" //'70px'
-        d.style.margin = 'auto'
-
-        for (var x = 0; x < listBtns.length; x++) {
-            var btn = document.createElement('input');
-            // var br = document.createElement('br');
-            btn.id = 'b' + x;
-            btn.value = listBtns[x]
-            btn.type = 'button'
-            btn.className = "btns"
-            d.appendChild(btn)
-
-            // if ((x - 4) %4 == 0)  {
-            //     document.querySelector('body').appendChild(btn)
-            //     document.querySelector('body').appendChild(br)
-            // }
-
-            // document.body.appendChild(btn)
-            document.body.appendChild(br)
-            document.body.appendChild(d)
-        
-            btn.addEventListener('click', function() {
-                var valueForm = myform.field.value += ' ' + this.value;
-                var newValueFormFormat = $.trim(valueForm)
-                var text = document.getElementById('text').value
-                var english = "{{ stack.english }}"
-                var russia = "{{ stack.russia }}".split(' ')
-
-                var lenVFF = newValueFormFormat.split(' ')
-                var splitEnglish = english.split(' ')
-
-                if($.trim(text)  == english) {
-                    alert('good')
-                    $(document).ready(function() {
-                        $.ajax({
-                            url: "",
-                            type: "POST",
-                            data: $("#myform").serialize(),
-                            success: function(html) {
-                                $("body").html(html)
-                                $("#myform")[0].reset()
-                            }
-                        })
-                    })
-
-                }else if(lenVFF.length >= splitEnglish.length) {
-                    alert('no')
-                    $(document).ready(function() {
-                        $.ajax({
-                            url: "",
-                            type: "GET",
-                            data: $("#myform").serialize(),
-                            success: function(html) {
-                                $("body").html(html)
-                                $("#myform")[0].reset()
-                            }
-                        })
-                    })
-                }
-            })
-        }
-
+        var english = "{{ stack.english }}"
+        var russia = "{{ stack.russia }}".split(' ')
     </script>
+
+    <script src="/static/fighter/js/lesson.js"></script>
 
     </center>
     </div>
-
-
 </body>
 {% endblock %}
-
-    <!--<script>
-    function foo() {
-    
-        var valueForm = myform.field.value
-        var newValueFormFormat = $.trim(valueForm)
-        var text = document.getElementById('text').value
-        var english = "{{ stack.english }}"
-
-        if($.trim(text) == english) {
-            alert('good')
-            $(document).ready(function() {
-                    $.ajax({
-                        url: "",
-                        type: "POST",
-                        data: $("#myform").serialize(),
-                        success: function(html) {
-                            $("body").html(html);
-                            $('#myform')[0].reset();
-                        },
-                    });
-                    return false;
-            });
-        }else{
-            alert('no')
-            $(document).ready(function() {
-                    $.ajax({
-                        url: "",
-                        type: "GET",
-                        data: $("#myform").serialize(),
-                        success: function(html) {
-                            $("body").html(html);
-                            $('#myform')[0].reset();
-                        },
-                    });
-                    return false;
-                });
-        }
-    }
-
-    </script>-->
-    <!--<script>
-        $(document).ready(function() {
-            $('#myform').submit(function() {
-                $.ajax({
-                    url: "",
-                    type: "POST",
-                    // data: "csrfmiddlewaretoken={{ csrf_token }}",
-                    data: $('#myform').serialize(),
-                    success: function(html) {
-                        // $("#showRU").html("{{ stack.russia }}")
-                        $("body").html(html)
-                        $('#myform')[0].reset();
-                    }
-                })
-                return false;
-            })
-        })
-        
-    </script>-->

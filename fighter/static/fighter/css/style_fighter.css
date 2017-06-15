@@ -183,3 +183,7 @@ a {
     background: linear-gradient(to right, #22CACE, #36B8D0);
     height: 50%;
 }
+
+#text {
+    text-align: center;
+}

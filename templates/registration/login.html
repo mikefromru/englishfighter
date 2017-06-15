@@ -21,7 +21,7 @@
   <a href="{% url 'social:begin' 'twitter' %}">Twitter</a>
   <a href="{% url 'social:begin' 'google-oauth2' %}">Google</a>
   <a href="{% url 'social:begin' 'vk-oauth2' %}">Vkontakte</a>
-<p>{% trans "Забыли пароль" %}? <a href="{% url 'auth_password_reset' %}">{% trans "Reset it" %}</a>!</p>
-<p>Нет аккаунта?<a href="{% url 'registration_register' %}">{% trans "Register" %}</a>!</p>
+<p>{% trans "Забыли пароль" %}? <a href="{% url 'auth_password_reset' %}">{% trans "Сбросить пароль" %}</a>!</p>
+<p>Нет аккаунта? <a href="{% url 'registration_register' %}">{% trans "Регистрация" %}</a>!</p>
 </div>
 {% endblock %}

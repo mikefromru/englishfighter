@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+    <script>
+	window.addEventListener("DOMContentLoaded", function() {
+		var x = 0;
+        var br = document.createElement("br");
+		function genButtons(a) {
+		
+            var parent = document.getElementById('_buttons'),
+            inp = parent.querySelectorAll("[id^='b']");
+            [].forEach.call(inp, function(btn){
+                parent.removeChild(btn)
+            });
+            a.slice(0, 4).forEach(function(str, x){
+                var btn = document.createElement("input");
+                btn.id = "b" + x;
+                btn.value = str;
+                btn.type = "button";
+                btn.className = "btns";
+                
+                if ((x - 2)%2 == 0) {
+                    // document.getElementById('_buttons').appendChild(btn)
+                    document.getElementById('_buttons').appendChild(br)
+                }
+                parent.appendChild(btn)
+
+                btn.addEventListener("click", function(){
+                    genButtons(a.slice(4))
+                    var valueForm = myform.field.value += ' ' + this.value;
+                    //  здесь что-нибудь делаю
+
+                })
+            })
+		}
+	var something = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
+    'eleven', 'twelve', 'thriteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty']
+	genButtons(something)
+})
+</script>
+
+<body style="background: #2B3D52">
+<center>
+    <form id="myform" onsubmit="foo(); return false;" name='myform' >{% csrf_token %}
+        <input id="text" name="field" type="text" autocomplete="off" autofocus="on">
+    </form>
+    <div id="_buttons"></div>
+</center>
+</body>
+</html>

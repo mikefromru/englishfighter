@@ -13,13 +13,16 @@
 <body>
     <ul id="nav">
         <!--<li><a style="padding-top: 0%" href="/fighter/demo"><img class="round" src="{% static 'fighter/img/logo1_copy.jpeg' %}" width="45" height="45"></li></a>-->
-        <li><a href="/fighter/demo">ENGLISH FIGHTER</a></li>
+        <li><a href="/fighter/index">ENGLISH FIGHTER</a></li>
         {% if user.is_anonymous %}
             <!--<li><a href="/accounts/register">Регистрация</a></li>-->
         {% endif %}
             {% if user.is_authenticated %}
             <li><div id="point"><img src="{% static 'fighter/img/moneta.jpg' %}" width="20" height="20"><div id="points">{{ user.userprofile.points }}</div></li>
             {% endif %}
+        {% if request.is_superuser %}
+            <a href="fighter/myadmin">MyAdmin</a>
+        {% endif %}
         <div id="nav2">
             {% if user.userprofile %}
 
@@ -35,6 +38,9 @@
                             {% if user.userprofile.avatar %}
                                 <img src="{{ user.userprofile.avatar.url }}" width="43" height="40">
                             bla bla bla
+                            {% endif %}
+                            {% if user.is_superuser %}
+                                <p><a href="/fighter/myadmin">MyAdmin</a></p>
                             {% endif %}
                             <p><a href="/accounts/profile">Профиль</a></p>
                             <p><a href="/accounts/editing">Настройки</a></p> 
