@@ -1,4 +1,10 @@
+from django import forms
+from .models import LessonOne
 
+class LessonOneForm(forms.ModelForm):
+    class Meta:
+        model = LessonOne
+        fields = ('russia', 'english', 'buttons')
 
 
 

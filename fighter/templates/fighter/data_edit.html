@@ -1,0 +1,15 @@
+{% extends 'fighter/base.html' %}
+{% block content %}
+<style>
+    body {background: #EDEEF0}
+</style>
+<div class="root_content">
+    Count: {{ amount.count }}
+    <form method="POST">{% csrf_token %}
+        {{ form.as_p }}
+        <input id="root_button_save" type="submit" name="save" value="Save">
+        <input id="root_button_cancel" type="button" onclick="location.href='/myadmin'" value='Cancel'>
+        <input id="root_button_delete" type="submit" name="delete" value="Delete">
+    </form>
+</div>
+{% endblock %}

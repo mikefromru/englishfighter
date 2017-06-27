@@ -32,13 +32,17 @@
     <div id="showRU" class="sentence">
         {{ stack.russia }}<br />
     </div>
+    <script>
+        document.getElementById('text').blur()
+    </script>
 
     <form id="myform" onsubmit="foo(); return false;" name='myform' >{% csrf_token %}
-        <input id="text" name="field" type="text" autocomplete="off" autofocus="on">
+        <input id="text" name="field" type="text" disabled autocomplete="off" autofocus="on">
     </form>
-    <button class="btnInViews" onclick="dell_word()">Dell</button>
-
-    <div id="_buttons"></div>
+    <button id="d" class="btnInViews" value="Dell" onclick="dell_word()">Dell</button>
+    <!--<input type="button" id="d" class="btnInViews" value="dell" onclick="dell_word()">-->
+    <div id="_buttons"></div><br>
+    <div id="_buttons_two"></div>
     <script>
         var listBtns = "{{ stack.buttons }}".split(' ')
         var english = "{{ stack.english }}"
