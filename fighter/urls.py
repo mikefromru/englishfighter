@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^tmp/$', tmp),
     url(r'myadmin/$', myadmin),
     url(r'^tmp_two/$', tmp_two),
-    url(r'^listdata/$', listdata, name="listdata"),
+    url(r'^addition/$', addition),
     url(r'^data_edit/(?P<pk>[0-9]+)/edit/$', data_edit, name="data_edit"),
+    url(r'^listdata/$', listdata, name="listdata"),
 ]

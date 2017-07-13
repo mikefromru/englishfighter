@@ -1,0 +1,20 @@
+{% extends 'fighter/base.html' %}
+{% block content %}
+
+<div class="root_content">
+    {{id}}
+    <form method="POST">{% csrf_token %}
+        {{ form.as_p }}
+        <input id="root_button_save" type="submit" value="Save">
+        <input id="root_button_cancel" type="button" value="Cancel" onclick="location.href='/myadmin'">
+    </form>
+    <div id="count"></div>
+</div>
+<script>
+    document.getElementById('id_buttons').addEventListener('keyup', count_elem)
+    function count_elem() {
+        var arrayTextarea = document.getElementById('id_buttons').value.split(' ')
+        document.getElementById('count').innerHTML = arrayTextarea.length
+    }
+</script>
+{% endblock %}

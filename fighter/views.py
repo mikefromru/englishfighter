@@ -1,9 +1,10 @@
+# -*- coding: UTF-8 -*-
 from django.shortcuts import render, HttpResponseRedirect, render_to_response, redirect
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponseNotFound
 from django.contrib.auth.models import User
 from accounts.models import UserProfile
-from fighter.models import LessonOne
+from fighter.models import LessonOne, LessonTwo
 from .forms import LessonOneForm
 
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
@@ -17,10 +18,27 @@ def myadmin(request):
     """Enter is only SUPERUSER"""
     if request.user.is_superuser:
         return render(request, 'fighter/myadmin.html')
-    # return HttpResponseRedirect('/')
     return HttpResponseNotFound("<h1>Page not found</h1>")
 
+def addition(request):
+    if not request.user.is_superuser:
+        return HttpResponseNotFound("<h1>Page not found</h1>")
+    
+    amount = LessonOne.objects.all()
+    if request.method == "POST":
+        form = LessonOneForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/addition')
+    else:
+        form = LessonOneForm
+    return render(request, 'fighter/addition.html', {'form': form,
+    'amount': len(amount)})
+
 def data_edit(request, pk):
+    if not request.user.is_superuser:
+        return HttpResponseNotFound("<h1>Page not found</h1>")
+
     amount = LessonOne.objects.all()
     some = get_object_or_404(LessonOne, pk=pk)
 
@@ -37,6 +55,9 @@ def data_edit(request, pk):
     return render(request, 'fighter/data_edit.html', {'form': form, 'amount': amount})
 
 def listdata(request):
+    if not request.user.is_superuser:
+        return HttpResponseNotFound("<h1>Page not found</h1>")
+
     data = LessonOne.objects.all()
     paginator = Paginator(data, 14)
     page = request.GET.get('page')
@@ -52,9 +73,10 @@ def listdata(request):
 def lesson_one(request):
     if not request.user.is_authenticated():
         return HttpResponseRedirect('/accounts/login')
+
     message = "Базовая форма глагола"
     stack = LessonOne.objects.order_by('?')[0]
-    # stack = LessonOne.objects.all()[0]
+    # stack = LessonOne.objects.all()[1]
 
     if request.method == "POST":
         profile = UserProfile.objects.get(user=request.user)
@@ -70,8 +92,9 @@ def lesson_one(request):
 def lesson_two(request):
     if not request.user.is_authenticated():
         return HttpResponseRedirect('/accounts/login')
+
     message = 'Местоимения. Вопросительные слова'
-    stack = LessonOne.objects.order_by('?')[0]
+    stack = LessonTwo.objects.order_by('?')[0]
     if request.method == "POST":
         profile = UserProfile.objects.get(user=request.user)
         profile.points += 2
@@ -96,50 +119,5 @@ def tmp(request):
         'stack': stack,
         'message': message})
 
-
 def tmp_two(request):
     return render(request, 'fighter/tmp_two.html')
-
-
-    # stack = LessonOne.objects.order_by('?')[0]
-    # if request.method == "POST":
-    #     return HttpResponseRedirect('/tmp')
-    # return render(request, 'fighter/tmp.html', {
-    #     'stack': stack})
-
-
-
-
-
-# stack_lesson_one = LessonOne.objects.order_by('?')[0]
-# def lesson_one(request):
-#     # global stack_lesson_one
-#     message = 'The lesson number 1'
-#     if request.POST.get('q'):
-#         user_english_choice = request.POST['q']
-#         print(stack_lesson_one.english, 'original')
-#         if user_english_choice == stack_lesson_one.english:
-#             print(True)
-#             profile = UserProfile.objects.get(user=request.user)
-#             profile.points += 2
-#             profile.save()
-#             stack_lesson_one = LessonOne.objects.order_by('?')[0]
-#         elif user_english_choice != stack_lesson_one.english:
-#             print(False)
-#             stack_lesson_one = LessonOne.objects.order_by('?')[0]
-        # return HttpResponseRedirect('/lesson_one')
-
-    # if request.POST.get('plus'):
-    #     profile = UserProfile.objects.get(user=request.user)
-    #     profile.points += 1
-    #     profile.save()
-    #     return HttpResponseRedirect("/lesson_one")
-    # if request.POST.get('minus'):
-    #     print('--' * 8)
-    #     print('hello world')
-    #     return HttpResponseRedirect("/lesson_one")
-    
-
-    # return render(request, "fighter/lesson.html", {
-    #     'stack': stack_lesson_one,
-    #     'message': message})

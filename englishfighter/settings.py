@@ -11,8 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
-
-
+from .settings_local import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -101,8 +100,17 @@ WSGI_APPLICATION = 'englishfighter.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': ENGINE,
+        'NAME': 'dbenglishfighter',
+        'USER': USER,
+        'PASSWORD': PASSWORD,
+        'HOST': HOST,
+        'PORT': PORT,
+        'OPTIONS': {
+            # 'read_default_file': '/etc/mysql/my.cnf',
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            'init_command': "SET storage_engine=INNODB",
+        },
     }
 }
 
@@ -139,7 +147,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-from .settings_local import *
 
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.google.GoogleOAuth2',

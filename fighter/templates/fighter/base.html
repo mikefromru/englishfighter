@@ -41,6 +41,7 @@
                             bla bla bla
                             {% endif %}
                             {% if user.is_superuser %}
+                                <p><a href="/admin">Admin</a></p>
                                 <p><a href="/fighter/myadmin">MyAdmin</a></p>
                             {% endif %}
                             <p><a href="/accounts/profile">Профиль</a></p>
@@ -57,7 +58,7 @@
             {% endif %}
         </div>
     </ul>
-    </br>
+    <!--</br>-->
     {% block content %}{% endblock %}
     {% block footer %} {% endblock %}
     <script src="/static/fighter/js/profile_scripts.js"></script>

@@ -17,41 +17,51 @@
     <!--// });-->
 <!--</script>-->
 
-<body style="background: #2B3D52">
-
-<script>
-    function setFocus() {
-        document.getElementById("text").focus();
-    }
-    setFocus()
-</script>
+<!--<body style="background: #2B3D52">-->
 
 <div id="block">
     <center>
-    <p style="color: red">{{ message }}</p>
+    <!--<div style="color: green">{{ message }}</div>-->
+    <div id='color_message'>{{ message }}</div>
     <div id="showRU" class="sentence">
-        {{ stack.russia }}<br />
+        {{ stack.russia }}
     </div>
     <script>
-        document.getElementById('text').blur()
+        document.getElementById('text')
     </script>
+    <hr align="center" width="500" size="2" color="grey" />
+    <p></p>
+    <!--<br>-->
 
     <form id="myform" onsubmit="foo(); return false;" name='myform' >{% csrf_token %}
         <input id="text" name="field" type="text" disabled autocomplete="off" autofocus="on">
+        <button class="btnInViews" value="Dell" onclick="dell_word(); return false;">x</button>
+        <!--<button id="d" class="btnInViews" value="Dell" onclick="dell_word()"><=</button>-->
     </form>
-    <button id="d" class="btnInViews" value="Dell" onclick="dell_word()">Dell</button>
-    <!--<input type="button" id="d" class="btnInViews" value="dell" onclick="dell_word()">-->
-    <div id="_buttons"></div><br>
-    <div id="_buttons_two"></div>
+    <!--<hr align="center" width="500" size="2" color="grey" />-->
+    <div id="_buttons"></div>
+
     <script>
         var listBtns = "{{ stack.buttons }}".split(' ')
-        var english = "{{ stack.english }}"
+        for (var x = 0; x < listBtns.length; x++) {
+            if (listBtns[x].match(/&#39;/)) {
+                var index_ = listBtns.indexOf(listBtns[x])
+                replace_elem = listBtns[x].replace("&#39;", "'")
+                listBtns.splice(index_, 1, replace_elem)
+            }else if(listBtns[x].match(/_/)) {
+                var index_ = listBtns.indexOf(listBtns[x])
+                replace_elem = listBtns[x].replace(/\_/g, ' ')
+                listBtns.splice(index_, 1, replace_elem)
+            }
+        }
+        var english = "{{ stack.english }}".replace("&#39;", "'").replace(/\_/g, ' ')
         var russia = "{{ stack.russia }}".split(' ')
     </script>
 
+    <!--<script src="/static/fighter/js/demo.js"></script>-->
     <script src="/static/fighter/js/lesson.js"></script>
 
     </center>
     </div>
-</body>
+<!--</body>-->
 {% endblock %}

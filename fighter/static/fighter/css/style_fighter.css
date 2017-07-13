@@ -54,7 +54,17 @@
 }
 
 body {
+    /*background-color: #2B3D52;*/
     margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#color_message {
+    position: absolute;
+    top: 70px;
+    left: 15px;
+    font-size: 15px;
+    color: grey;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -83,20 +93,23 @@ body {
 }
 
 .btnInViews {
+    position: relative;
     outline: none;
-    /*padding: 10px;*/
+    left: 50px;
+    top: -4px;
     /*border: 0;*/
-    border-radius: 5px;
+    border: 1px;
+    background-color: #5E7188;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 5%;
-    background-color: #33485F;
-    width: 100px;
-    height: 40px;
-    font-size: 16px;
-}
-.btnInViews:hover {background-color: #2B3D52}
+    width: 110px;
+    height: 45px;
+    margin: 10px;
+    outline: none;
 
+}
+.btnInViews:hover {background-color: #69798C; color: red}
 
 .lessonstart {
     display: none;
@@ -155,7 +168,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
 a {
     outline: none;
 }
@@ -163,15 +175,17 @@ a {
 /*the buttons in lesson of template*/
 .btns {
     border: 1px;
-    background-color: white;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: grey;
-    width: 130px;
+    background-color: #5E7188;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    width: 150px;
     height: 40px;
     margin: 10px;
     outline: none;
 }
+
+.btns:hover {background-color: #69798C}
 
 .btns:focus{
     border: 0px solid green; 
@@ -185,5 +199,13 @@ a {
 }
 
 #text {
+    position: relative;
+    left: 60px;
     text-align: center;
+    color: grey;
+    font-size: 30px;
+    width: 54%;
+    height: 45px;
+    /*border: 0;*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
