@@ -11,5 +11,15 @@
         <input id="root_button_cancel" type="button" onclick="location.href='/myadmin'" value='Cancel'>
         <input id="root_button_delete" type="submit" name="delete" value="Delete">
     </form>
+
+    <div id='count'>Count: </div>
+
+    <script>
+    document.getElementById('id_buttons').addEventListener('keyup', count_elem)
+    function count_elem() {
+        var arrayTextarea = document.getElementById('id_buttons').value.split(' ')
+        document.getElementById('count').innerHTML = arrayTextarea.length
+    }
+    </script>
 </div>
 {% endblock %}

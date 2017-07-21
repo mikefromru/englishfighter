@@ -89,13 +89,13 @@ function get_and_post(btn) {
     console.log(lenVFF.length, 'lenVFF')
 
     if(newValueFormFormat == english) {
-        alert('good')
         $(document).ready(function() {
             $.ajax({
                 url: "",
                 type: "POST",
                 data: $("#myform").serialize(),
                 success: function(html) {
+                alert('good')
                     $("body").html(html)
                     $("#myform")[0].reset()
                     genButtons(listBtns)
@@ -104,16 +104,16 @@ function get_and_post(btn) {
         })
 
     }else if(lenVFF.length >= splitEnglish.length) {
-        alert('no')
         $(document).ready(function() {
             $.ajax({
                 url: "",
                 type: "GET",
                 data: $("#myform").serialize(),
                 success: function(html) {
+                    alert('no')
                     $("body").html(html)
-                    $("#myform")[0].reset()
                     genButtons(listBtns)
+                    $("#myform")[0].reset()
                 }
             })
         })
