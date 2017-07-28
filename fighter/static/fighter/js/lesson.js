@@ -2,6 +2,18 @@ var OnclickList = []
 
 function dell_word() {
     var f = myform.field.value.split(" ")
+    // f.forEach(function(elem, index, arr) {
+    //     if (f[index + 1] == 'be') {
+    //         f[index] = f[index].toString() + ' be';
+    //         arr.splice(index + 1, 1)
+        // }
+    // })
+    // f.forEach(function(elem, index, arr) {
+        // if (f[index + 1] == 'not') {
+            // f[index] = f[index].toString() + ' not';
+            // arr.splice(index + 1, 1)
+        // }
+    // })
     f.pop()
     myform.field.value = f.join(" ")
     OnclickList.pop()
@@ -77,6 +89,7 @@ function dell_word() {
 genButtons(listBtns)
 
 function get_and_post(btn) {
+
     var valueForm = myform.field.value += ' ' + btn.value;
 
     var newValueFormFormat = $.trim(valueForm)
@@ -84,9 +97,8 @@ function get_and_post(btn) {
 
     var lenVFF = newValueFormFormat.split(' ')
     var splitEnglish = english.split(' ')
-
-    console.log(splitEnglish.length, 'splitEnglish')
-    console.log(lenVFF.length, 'lenVFF')
+    console.log(lenVFF.length, 'this lenVFF')
+    console.log(splitEnglish.length, "this splitEnglish")
 
     if(newValueFormFormat == english) {
         $(document).ready(function() {
@@ -110,7 +122,7 @@ function get_and_post(btn) {
                 type: "GET",
                 data: $("#myform").serialize(),
                 success: function(html) {
-                    alert('no')
+                    alert("it's incorrect")
                     $("body").html(html)
                     genButtons(listBtns)
                     $("#myform")[0].reset()

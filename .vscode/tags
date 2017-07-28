@@ -204,8 +204,8 @@ initial	../accounts/migrations/0001_initial.py	/^    initial = True$/;"	kind:var
 initial	../fighter/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:12
 initial	../fighter/migrations/0005_stack.py	/^    initial = True$/;"	kind:variable	line:10
 inlines	../accounts/admin.py	/^    inlines = (UserInline,)$/;"	kind:variable	line:13
-lesson_one	../fighter/views.py	/^def lesson_one(request):$/;"	kind:function	line:73
-lesson_two	../fighter/views.py	/^def lesson_two(request):$/;"	kind:function	line:92
+lesson_one	../fighter/views.py	/^def lesson_one(request):$/;"	kind:function	line:65
+lesson_two	../fighter/views.py	/^def lesson_two(request):$/;"	kind:function	line:85
 listdata	../fighter/views.py	/^def listdata(request):$/;"	kind:function	line:57
 login.html.py	../templates/registration/login.html.py	1;"	kind:file	line:1
 logout.html.py	../templates/registration/logout.html.py	1;"	kind:file	line:1
@@ -308,8 +308,8 @@ settings.py	../englishfighter/settings.py	1;"	kind:file	line:1
 settings_local.py	../englishfighter/settings_local.py	1;"	kind:file	line:1
 tests.py	../accounts/tests.py	1;"	kind:file	line:1
 tests.py	../fighter/tests.py	1;"	kind:file	line:1
-tmp	../fighter/views.py	/^def tmp(request):$/;"	kind:function	line:107
-tmp_two	../fighter/views.py	/^def tmp_two(request):$/;"	kind:function	line:122
+tmp	../fighter/views.py	/^def tmp(request):$/;"	kind:function	line:100
+tmp_two	../fighter/views.py	/^def tmp_two(request):$/;"	kind:function	line:115
 urlpatterns	../accounts/urls.py	/^urlpatterns = [$/;"	kind:variable	line:4
 urlpatterns	../englishfighter/urls.py	/^urlpatterns = [$/;"	kind:variable	line:27
 urlpatterns	../fighter/urls.py	/^urlpatterns = [$/;"	kind:variable	line:4

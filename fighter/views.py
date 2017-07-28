@@ -58,16 +58,8 @@ def listdata(request):
     if not request.user.is_superuser:
         return HttpResponseNotFound("<h1>Page not found</h1>")
 
-    data = LessonOne.objects.all()
-    paginator = Paginator(data, 14)
-    page = request.GET.get('page')
-    try:
-        data = paginator.page(page)
-    except PageNotAnInteger:
-        data = paginator.page(1)
-    except EmptyPage:
-        data = paginator.page(Paginator.num_pages)
-    return render(request, 'fighter/listdata.html', {'data': data, "amount": len(data)})
+    data = LessonOne.objects.order_by("-id")
+    return render(request, 'fighter/listdata.html', {'data': data, 'amount': len(data)})
 
 # @csrf_exempt
 def lesson_one(request):
@@ -76,7 +68,7 @@ def lesson_one(request):
 
     message = "Базовая форма глагола"
     stack = LessonOne.objects.order_by('?')[0]
-    # stack = LessonOne.objects.all()[1]
+    # stack = LessonOne.objects.all().last()
 
     if request.method == "POST":
         profile = UserProfile.objects.get(user=request.user)

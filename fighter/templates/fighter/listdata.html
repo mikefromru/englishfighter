@@ -4,10 +4,10 @@
     body {background: #EDEEF0}
 </style>
 <div class="root_content">
-Count: {{ amount }}
-<p><a href="/fighter/addition">Addition</a></p>
+<p><a href="/fighter/addition">Addition</a> Count: {{ amount }}</p>
 {% for obj in data %}
-    <h4><a href="{% url 'data_edit' pk=obj.pk %}">{{ forloop.counter }}. {{ obj.russia }}</a></h4>
+    <!--<h4><a href="{% url 'data_edit' pk=obj.pk %}">{{ forloop.counter }}. {{ obj.russia }}</a></h4>-->
+    <h4><a href="{% url 'data_edit' pk=obj.pk %}">{{ obj.russia }}</a></h4>
 {% endfor %}
 </div>
 
