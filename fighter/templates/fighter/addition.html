@@ -1,14 +1,14 @@
 {% extends 'fighter/base.html' %}
 {% block content %}
 
+
 <div class="root_content">
-    {{id}}
+    <div id="count">0</div>
     <form method="POST">{% csrf_token %}
         {{ form.as_p }}
         <input id="root_button_save" type="submit" value="Save">
-        <input id="root_button_cancel" type="button" value="Cancel" onclick="location.href='/myadmin'">
+        <input id="root_button_cancel" type="button" value="Cancel" onclick="location.href='/listdata'">
     </form>
-    <div id="count"></div>
 </div>
 <script>
     document.getElementById('id_buttons').addEventListener('keyup', count_elem)

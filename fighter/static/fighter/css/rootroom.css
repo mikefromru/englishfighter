@@ -1,5 +1,5 @@
 .root_body {
-    background: #EDEEF0;
+    background: #E5E8E5;
 }
 
 .root_content {
@@ -45,6 +45,12 @@
     width: 120px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    
+}
+
+#avatar-clear_id {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
 #root_button_cancel:hover {background: #6991A4}

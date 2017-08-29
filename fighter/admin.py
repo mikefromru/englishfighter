@@ -11,10 +11,11 @@
 #         try:
 
 from django.contrib import admin
-from .models import LessonOne, LessonTwo
+from .models import LessonOne, LessonTwo, LessonThree
 
 class SearchRussianWord(admin.ModelAdmin):
     search_fields = ('russia', 'id')
 
 admin.site.register(LessonOne, SearchRussianWord)
 admin.site.register(LessonTwo, SearchRussianWord)
+admin.site.register(LessonThree, SearchRussianWord)

@@ -58,7 +58,28 @@ function dell_word() {
         var group = listBtns.slice(60, 70) 
         genButtons(group)
         genButtons(listBtns.slice(60))
+
+
+
+    }else if(f_format.length == 7) {
+        console.log('SIX')
+        var group = listBtns.slice(70, 80) 
+        genButtons(group)
+        genButtons(listBtns.slice(70))
+    }else if(f_format.length == 8) {
+        console.log('SIX')
+        var group = listBtns.slice(80, 90) 
+        genButtons(group)
+        genButtons(listBtns.slice(80))
+    }else if(f_format.length == 9) {
+        console.log('SIX')
+        var group = listBtns.slice(90, 100) 
+        genButtons(group)
+        genButtons(listBtns.slice(90))
     }
+
+
+
 }
 
     var x = 0;
@@ -100,7 +121,7 @@ function get_and_post(btn) {
     console.log(lenVFF.length, 'this lenVFF')
     console.log(splitEnglish.length, "this splitEnglish")
 
-    if(newValueFormFormat == english) {
+    if(newValueFormFormat.toLowerCase() == english.toLowerCase()) {
         $(document).ready(function() {
             $.ajax({
                 url: "",

@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>English Fighter</title>
     <link rel="stylesheet" href="{% static 'fighter/css/style_fighter.css' %}">
-    <link rel="stylesheet" href="{% static 'fighter/css/modal_window_profile.css' %}">
     <link rel="stylesheet" href="{% static 'fighter/css/rootroom.css' %}">
     <link rel="stylesheet" href="{% static 'accounts/css/style_accounts.css' %}">
     <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -38,18 +37,18 @@
                         <div class="modal-content">
                             {% if user.userprofile.avatar %}
                                 <img src="{{ user.userprofile.avatar.url }}" width="43" height="40">
-                            bla bla bla
+                                {{ user.userprofile.points }}
                             {% endif %}
                             {% if user.is_superuser %}
-                                <p><a href="/admin">Admin</a></p>
-                                <p><a href="/fighter/myadmin">MyAdmin</a></p>
+                                <p><a href="/admin">ADMIN</a></p>
+                                <p><a href="/fighter/myadmin">MYADMIN</a></p>
                             {% endif %}
-                            <p><a href="/accounts/profile">Профиль</a></p>
-                            <p><a href="/accounts/editing">Настройки</a></p> 
-                            <a href="/accounts/password_change">Изменить пароль</a>
-                            <p><a href="#">Помощь</a></p> 
-                            <hr>
-                            <p><a href="/accounts/logout">Выйти</a></p><br>
+                            <p><a href="/accounts/profile">ПРОФИЛЬ</a></p>
+                            <p><a href="/accounts/editing">НАТРОЙКИ</a></p> 
+                            <a href="/accounts/password_change">ИЗМЕНТЬ ПАРОЛЬ</a>
+                            <p><a href="#">ПОМОЩЬ</a></p> 
+                            <hr id="id_hr">
+                            <p><a href="/accounts/logout">ВЫЙТИ</a></p><br>
                         </div>
                     </div>
 
@@ -58,9 +57,9 @@
             {% endif %}
         </div>
     </ul>
-    <!--</br>-->
-    {% block content %}{% endblock %}
+    </br>
+    {% block content %} {% endblock %}
     {% block footer %} {% endblock %}
-    <script src="/static/fighter/js/profile_scripts.js"></script>
+    <script src="/static/fighter/js/scripts.js"></script>
 </body>
 </html>

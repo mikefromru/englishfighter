@@ -1,15 +1,48 @@
 from django import forms
-from .models import LessonOne
+from .models import (
+    LessonOne, 
+    LessonTwo,
+    LessonThree,
+    LessonFour,
+    LessonFive,
+    LessonSix,
+    LessonSeven
+)
 
 class LessonOneForm(forms.ModelForm):
     class Meta:
         model = LessonOne
         fields = ('russia', 'english', 'buttons')
 
+class LessonTwoForm(forms.ModelForm):
+    class Meta:
+        model = LessonTwo
+        fields = ('russia', 'english', 'buttons')
 
+class LessonThreeForm(forms.ModelForm):
+    class Meta:
+        model = LessonThree
+        fields = ('russia', 'english', 'buttons')
 
+class LessonFourForm(forms.ModelForm):
+    class Meta:
+        model = LessonFour
+        fields = ('russia', 'english', 'buttons')
 
+class LessonFiveForm(forms.ModelForm):
+    class Meta:
+        model = LessonFive
+        fields = ('russia', 'english', 'buttons')
 
+class LessonSixForm(forms.ModelForm):
+    class Meta:
+        model = LessonSix
+        fields = ('russia', 'english', 'buttons')
+
+class LessonSevenForm(forms.ModelForm):
+    class Meta:
+        model = LessonSeven
+        fields = ('russia', 'english', 'buttons')
 
 # from django.contrib.auth.forms import UserCreationForm
 # from django.contrib.auth.models import User

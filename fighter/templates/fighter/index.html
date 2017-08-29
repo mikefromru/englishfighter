@@ -13,43 +13,64 @@
 
 <body style="background: #2B3D52">
 
-    <center><div>The app is developing</div></center>
+    <center><div>The app is developing</div></center><br /><br />
+
+    <!-- <div id="parent"> -->
     <div class="wrap">
         <div class="lessonstart" onclick="location.href='/lesson_one/';">
-            <div class="color">Базовая форма глагола</div>
+            <div id="color-one">
+                <div class="position">Базовая форма глагола</div><br />
+                    <div class="progressbar"><div id="onebar"></div></div>
+            </div>
         </div>
         <div class="lessonstart" onclick="location.href='/lesson_two/';">
-            <div class="color">Местоимения. Вопросительные слова</div>
+            <div id="color-two">
+                <div class="position">Past simple, Present simple, Future simple</div><br />
+                    <div class="progressbar"><div id="twobar"></div></div>
+            </div>
         </div>
-        <div class="lessonstart" onclick="location.href='#';">
-            <div class="color">Third lesson</div>
-        </div>
-    </div>
-  
-    <div class="wrap">
-        <div class="lessonstart" onclick="location.href='#';">
-            <div class="color">Fourth lesson</div>
-        </div>
-        <div class="lessonstart" onclick="location.href='#';">
-            <div class="color">Fifth lesson</div>
-        </div>
-        <div class="lessonstart" onclick="location.href='#';">
-            <div class="color">Sixth lesson</div>
-        </div>
+        <!-- <div class="lessonstart" onclick="location.href='#';"> -->
+            <!-- <div class="color">Third lesson</div> -->
+        <!-- </div> -->
     </div>
 
     <div class="wrap">
         <div class="lessonstart" onclick="location.href='#';">
-            <div class="color">Seventh lesson</div>
+            <div id="color-three">
+                <div class="position">Three lesson</div><br />
+                    <div class="progressbar"><div id="threebar"></div></div>
+            </div>
         </div>
         <div class="lessonstart" onclick="location.href='#';">
-            <div class="color">Eighth lesson</div>
+            <div id="color-four">
+                <div class="position">Four lesson</div><br />
+                    <div class="progressbar"><div id="fourbar"></div></div>
+            </div>
         </div>
-        <div class="lessonstart" onclick="location.href='#';">
-            <div class="color">Ninth lesson</div>
-        </div>
+        <!-- <div class="lessonstart" onclick="location.href='#';"> -->
+            <!-- <div class="color">Sixth lesson</div> -->
+        <!-- </div> -->
     </div>
 
+    <div class="wrap">
+        <div class="lessonstart" onclick="location.href='#';">
+            <div id="color-five">
+                <div class="position">Five lesson</div><br />
+                    <div class="progressbar"><div id="fivebar"></div></div>
+            </div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div id="color-six">
+                <div class="position">Six lesson</div><br />
+                    <div class="progressbar"><div id="sixbar"></div></div>
+            </div>
+        </div>
+        <!-- <div class="lessonstart" onclick="location.href='#';"> -->
+            <!-- <div class="color">Ninth lesson</div> -->
+        <!-- </div> -->
+    </div>
+    
+<!-- 
     <div class="wrap">
         <div class="lessonstart" onclick="location.href='#';">
             <div class="color">Tenth lesson</div>
@@ -60,8 +81,8 @@
         <div class="lessonstart" onclick="location.href='#';">
             <div class="color">The twelfth lesson</div>
         </div>
-    </div>
-
+    </div> -->
+<!-- 
     <div class="wrap">
         <div class="lessonstart" onclick="location.href='#';">
             <div class="color">The thirteenth lesson</div>
@@ -72,6 +93,7 @@
         <div class="lessonstart" onclick="location.href='#';">
             <div class="color">The fifteenth lesson</div>
         </div>
-    </div>
+    </div> -->
+<!-- </div> -->
 </body>
 {% endblock %}

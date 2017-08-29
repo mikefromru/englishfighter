@@ -24,7 +24,13 @@
     <div id="_buttons"></div>
 
     <script>
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1)
+        }
         var listBtns = "{{ stack.buttons }}".split(' ')
+        for (x=0; x<10; x++) {
+            listBtns[x] = capitalizeFirstLetter(listBtns[x])
+        }
         for (var x = 0; x < listBtns.length; x++) {
             if (listBtns[x].match(/&#39;/)) {
                 var index_ = listBtns.indexOf(listBtns[x])

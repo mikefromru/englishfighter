@@ -5,6 +5,7 @@
 
 input[type='text'], input[type="email"], input[type='password'] {
     /*text-indent: 1%;*/
+    color: grey;
     padding-left: 10px;
     height: 40px;
     width: 30%;

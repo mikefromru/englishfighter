@@ -7,6 +7,7 @@ urlpatterns = [
     url(r'^index/$', index),
     url(r'^lesson_one/$', lesson_one),
     url(r'^lesson_two/$', lesson_two),
+    # url(r'^lesson_three/$', lesson_three),
     url(r'^tmp/$', tmp),
     url(r'myadmin/$', myadmin),
     url(r'^tmp_two/$', tmp_two),
