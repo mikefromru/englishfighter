@@ -170,7 +170,7 @@ activate.html.py	../templates/registration/activate.html.py	1;"	kind:file	line:1
 activation_complete.html.py	../templates/registration/activation_complete.html.py	1;"	kind:file	line:1
 activation_email.txt.py	../templates/registration/activation_email.txt.py	1;"	kind:file	line:1
 activation_email_subject.txt.py	../templates/registration/activation_email_subject.txt.py	1;"	kind:file	line:1
-addition	../fighter/views.py	/^def addition(request):$/;"	kind:function	line:23
+addition	../fighter/views.py	/^def addition(request):$/;"	kind:function	line:26
 admin.py	../accounts/admin.py	1;"	kind:file	line:1
 admin.py	../fighter/admin.py	1;"	kind:file	line:1
 application	../englishfighter/wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
@@ -187,7 +187,7 @@ buttons	../fighter/models.py	/^    buttons = models.TextField()$/;"	kind:variabl
 can_delete	../accounts/admin.py	/^    can_delete = False$/;"	kind:variable	line:9
 city	../accounts/models.py	/^    city = models.CharField(max_length=30, blank=True)$/;"	kind:variable	line:9
 create_user_profile	../accounts/models.py	/^def create_user_profile(sender, instance, created, **kwargs):$/;"	kind:function	line:21
-data_edit	../fighter/views.py	/^def data_edit(request, pk):$/;"	kind:function	line:41
+data_edit	../fighter/views.py	/^def data_edit(request, pk):$/;"	kind:function	line:44
 dependencies	../accounts/migrations/0001_initial.py	/^    dependencies = [$/;"	kind:variable	line:14
 dependencies	../accounts/migrations/0002_auto_20170411_1745.py	/^    dependencies = [$/;"	kind:variable	line:12
 dependencies	../accounts/migrations/0003_auto_20170411_1850.py	/^    dependencies = [$/;"	kind:variable	line:11
@@ -255,9 +255,9 @@ initial	../accounts/migrations/0001_initial.py	/^    initial = True$/;"	kind:var
 initial	../fighter/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:12
 initial	../fighter/migrations/0005_stack.py	/^    initial = True$/;"	kind:variable	line:10
 inlines	../accounts/admin.py	/^    inlines = (UserInline,)$/;"	kind:variable	line:13
-lesson_one	../fighter/views.py	/^def lesson_one(request):$/;"	kind:function	line:76
+lesson_one	../fighter/views.py	/^def lesson_one(request):$/;"	kind:function	line:79
 lesson_two	../fighter/views.py	/^def lesson_two(request):$/;"	kind:function	line:95
-listdata	../fighter/views.py	/^def listdata(request):$/;"	kind:function	line:64
+listdata	../fighter/views.py	/^def listdata(request):$/;"	kind:function	line:67
 login.html.py	../templates/registration/login.html.py	1;"	kind:file	line:1
 logout.html.py	../templates/registration/logout.html.py	1;"	kind:file	line:1
 manage.py	../manage.py	1;"	kind:file	line:1
@@ -288,7 +288,7 @@ model_name	../fighter/migrations/0010_auto_20170710_1204.py	/^            model_
 model_name	../fighter/migrations/0011_auto_20170710_1208.py	/^            model_name='lessontwo',$/;"	kind:variable	line:16
 models.py	../accounts/models.py	1;"	kind:file	line:1
 models.py	../fighter/models.py	1;"	kind:file	line:1
-myadmin	../fighter/views.py	/^def myadmin(request):$/;"	kind:function	line:17
+myadmin	../fighter/views.py	/^def myadmin(request):$/;"	kind:function	line:20
 name	../accounts/apps.py	/^    name = 'accounts'$/;"	kind:variable	line:5
 name	../accounts/migrations/0001_initial.py	/^            name='UserProfile',$/;"	kind:variable	line:20
 name	../accounts/migrations/0002_auto_20170411_1745.py	/^            name='user',$/;"	kind:variable	line:19

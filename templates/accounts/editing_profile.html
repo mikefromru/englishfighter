@@ -4,7 +4,9 @@
     <h3>Настройки профиля</h3>
     <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        <p><label for="id_first_name">Имя:</label></p>
+        {{userform.as_p}}
+        {{profileform.as_p}}
+        <!-- <p><label for="id_first_name">Имя:</label></p>
         <p><input id="id_first_name" maxlength="30" name="first_name" type="text" value="{{user.first_name}}" /></p>
         <p><label for="id_last_name">Фамилия:</label></p>
         <p><input id="id_last_name" maxlength="30" name="last_name" type="text" value="{{user.last_name}}"/></p>
@@ -23,8 +25,8 @@
         {% endif %}
         <p>Изменить: <input class="show_file" id="id_avatar" name="avatar" type="file" /></p>
 
+    -->
         <button id="btnLogin" type="submit">Сохранить</button>
     </form>
-    
 </div>
 {% endblock %}

@@ -23,8 +23,9 @@ $(document).on('click', function () {
 //############ PROGRESS BAR ###############
 function progress_bar(bar, progress) {
     var elem = document.getElementById(bar);
-    var width = 50;
-    // var width = progress
+    var width = progress_line / 2;
+    // var width = 190 / 2;
+    console.log(width)
     elem.style.width = width + '%'
 }
 

@@ -12,6 +12,9 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 # from django.views.decorators.csrf import csrf_exempt
 
 def index(request):
+    if request.user.is_authenticated():
+        profile = UserProfile.objects.get(user=request.user)
+        return render(request, 'fighter/index.html', {'profile_points': profile.points})
     return render(request, 'fighter/index.html')
 
 def myadmin(request):
@@ -80,14 +83,11 @@ def lesson_one(request):
     message = "Базовая форма глагола"
     stack = LessonOne.objects.order_by('?')[0]
     # stack = LessonOne.objects.all().last()
-
     if request.method == "POST":
         profile = UserProfile.objects.get(user=request.user)
         profile.points += 2
         profile.save()
         return HttpResponseRedirect("/lesson_one")
-        print("hello++++++++++++++")
-
     return render(request, 'fighter/lesson.html', {
         'stack': stack,
         'message': message})
@@ -96,7 +96,7 @@ def lesson_two(request):
     if not request.user.is_authenticated():
         return HttpResponseRedirect('/accounts/login')
 
-    message = 'Местоимения. Вопросительные слова'
+    message = 'Past simple Present simple Future simple'
     # stack = LessonTwo.objects.order_by('?')[0]
     # stack = LessonTwo.objects.order_by()[88]
     stack = LessonTwo.objects.all().last()
