@@ -39,6 +39,7 @@ ALLOWED_HOSTS = ['*']
 
 
 # Application definition
+##Hello world #################################
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -102,7 +103,8 @@ WSGI_APPLICATION = 'englishfighter.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': ENGINE,
-        'NAME': 'dbenglishfighter',
+        # 'NAME': 'dbenglishfighter',
+        'NAME': NAME,
         'USER': USER,
         'PASSWORD': PASSWORD,
         'HOST': HOST,
