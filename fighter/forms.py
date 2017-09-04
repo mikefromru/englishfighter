@@ -5,8 +5,7 @@ from .models import (
     LessonThree,
     LessonFour,
     LessonFive,
-    LessonSix,
-    LessonSeven
+    LessonSix
 )
 
 class LessonOneForm(forms.ModelForm):
@@ -37,11 +36,6 @@ class LessonFiveForm(forms.ModelForm):
 class LessonSixForm(forms.ModelForm):
     class Meta:
         model = LessonSix
-        fields = ('russia', 'english', 'buttons')
-
-class LessonSevenForm(forms.ModelForm):
-    class Meta:
-        model = LessonSeven
         fields = ('russia', 'english', 'buttons')
 
 # from django.contrib.auth.forms import UserCreationForm

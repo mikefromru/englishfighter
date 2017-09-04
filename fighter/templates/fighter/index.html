@@ -26,7 +26,7 @@
         <div class="lessonstart" onclick="location.href='/lesson_two/';">
             <div id="color-two">
                 <div class="position">Past simple, Present simple, Future simple</div><br />
-                    <div class="progressbar"><div id="twobar"></div></div>
+                    <div id="progressbar"><div id="twobar"></div></div>
             </div>
         </div>
         <!-- <div class="lessonstart" onclick="location.href='#';"> -->
@@ -35,7 +35,7 @@
     </div>
 
     <div class="wrap">
-        <div class="lessonstart" onclick="location.href='#';">
+        <div class="lessonstart" onclick="location.href='/lesson_three/';">
             <div id="color-three">
                 <div class="position">Three lesson</div><br />
                     <div class="progressbar"><div id="threebar"></div></div>
@@ -96,8 +96,10 @@
     </div> -->
 <!-- </div> -->
     <script>
-        var progress_line = "{{ profile_points }}"
-        console.log(progress_line, 'hello')
+        var points = "{{ points_user }}"
+        var progress_line = "{{ profile_pointsProgressBar }}"
+        console.log(points, 'points of user')
+        console.log(progress_line)
     </script>
 </body>
 {% endblock %}

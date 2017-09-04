@@ -267,11 +267,49 @@ a {
     background-color: grey;
 }
 
-#onebar,
-#twobar,
-#threebar,
-#fourbar,
-#fivebar,
+#progressbar {
+    width: 70%;
+    margin: auto;
+    height: 1px;
+    background-color: grey;
+}
+
+
+
+#onebar {
+    width: 0%;
+    height: 1px;
+    background-color: #00FF7F;
+}
+
+
+#twobar {
+    width: 0%;
+    height: 1px;
+    background-color: #00FF7F;
+}
+
+
+#threebar {
+    width: 0%;
+    height: 1px;
+    background-color: #00FF7F;
+}
+
+
+#fourbar {
+    width: 0%;
+    height: 1px;
+    background-color: #00FF7F;
+}
+
+
+#fivebar {
+    width: 0%;
+    height: 1px;
+    background-color: #00FF7F;
+}
+
 #sixbar {
     width: 0%;
     height: 1px;

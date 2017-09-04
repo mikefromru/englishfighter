@@ -66,15 +66,3 @@ class LessonSix(models.Model):
 
     class Meta:
         verbose_name = 'LessonSix'
-
-class LessonSeven(models.Model):
-    russia = models.CharField(max_length=250)
-    english = models.CharField(max_length=250)
-    buttons = models.TextField()
-
-    def __str__(self):
-        return self.russia
-
-    class Meta:
-        verbose_name = 'LessonSeven'
-
