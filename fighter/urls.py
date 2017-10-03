@@ -7,7 +7,7 @@ urlpatterns = [
     url(r'^index/$', index),
     url(r'^lesson_one/$', lesson_one),
     url(r'^lesson_two/$', lesson_two),
-    url(r'^lesson_three$', lesson_three),
+    url(r'^lesson_three/$', lesson_three),
     url(r'^lesson_four/$', lesson_four),
     url(r'^lesson_five/$', lesson_five),
 
