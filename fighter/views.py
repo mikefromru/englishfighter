@@ -18,7 +18,8 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 def index(request):
     if request.user.is_authenticated():
         profile = UserProfile.objects.get(user=request.user)
-        if profile.points == 400 or profile.points == 800:
+        if profile.points == 400 or profile.points == 800 or profile.points == 1200 or profile.points == 1600\
+        or profile.points == 2000:
             profile.pointsProgressBar = 0
             profile.save()
         # return render(request, 'fighter/index.html', {'profile_points': profile.points})
@@ -119,9 +120,6 @@ def lesson_two(request):
             pass
         else:
             profile.points += 2
-        if profile.points >= 800:
-            pass
-        else:
             profile.pointsProgressBar += 1
         profile.save()
         return HttpResponseRedirect("/lesson_two")
@@ -138,8 +136,11 @@ def lesson_three(request):
     stack = LessonThree.objects.order_by('?')[0]
     if request.method == "POST":
         profile = UserProfile.objects.get(user=request.user)
-        profile.points += 2
-        profile.pointsProgressBar += 1
+        if profile.points >= 1200:
+            pass
+        else:
+            profile.points += 2
+            profile.pointsProgressBar += 1
         profile.save()
         return HttpResponseRedirect("/lesson_three")
     return render(request, 'fighter/lesson.html', {
@@ -155,8 +156,11 @@ def lesson_four(request):
     stack = LessonFour.objects.all().last()
     if request.method == "POST":
         profile = UserProfile.objects.get(user=request.user)
-        profile.points += 2
-        profile.pointsProgressBar += 1
+        if profile.points >= 1600:
+            pass
+        else:
+            profile.points += 2
+            profile.pointsProgressBar += 1
         profile.save()
         return HttpResponseRedirect("/lesson_four")
     return render(request, 'fighter/lesson.html', {
