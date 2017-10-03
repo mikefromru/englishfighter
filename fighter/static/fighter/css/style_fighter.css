@@ -123,15 +123,17 @@ a:hover {
 
 .lessonstart {
     display: none;
+    /* width: 620px; */
+    /* height: 200px; */
     width: 620px;
-    height: 200px;
+    height: 150px;
     color: white;
     background: white;
     cursor: pointer;
     float: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 11px;
+    /* font-weight: bold; */
     margin: 8px;
     border-radius: 3px;
 }

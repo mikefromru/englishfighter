@@ -45,26 +45,9 @@ if (points >= 799) {
 if (points >= 800) {
     progress_bar('threebar', 2) 
 }
-if (points >= 1199) {
-    var elem = document.getElementById('threebar');
-    elem.style.width = 100 + '%'
-}
-
-
-// if (progress_line > 400) {
-    // progress_bar('twobar', 8)
-    // var elem = document.getElementById('twobar')
-    // var width = progress_line / 8;
-    // console.log(width + '%')
-    // elem.style.width = width + '%'
-    // elem.style.width = '90%'
-// }else{
-    // var elem = document.getElementById('twobar');
+// lesson number four 
+// if (points >= 800) {
+// if (points >= 1199) {
+    // var elem = document.getElementById('threebar');
     // elem.style.width = 100 + '%'
-    // console.log('bla')
 // }
-
-// progress_bar('threebar', 16)
-// progress_bar('fourbar', 32)
-// progress_bar('fivebar', 64)
-// progress_bar('sixbar', 128)

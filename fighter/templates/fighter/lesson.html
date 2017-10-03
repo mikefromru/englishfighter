@@ -42,7 +42,7 @@
                 listBtns.splice(index_, 1, replace_elem)
             }
         }
-        var english = "{{ stack.english }}".replace("&#39;", "'").replace(/\_/g, ' ')
+        var english = "{{ stack.english }}".replace(/\&#39;/g, "'").replace(/\_/g, ' ')
         var russia = "{{ stack.russia }}".split(' ')
     </script>
 

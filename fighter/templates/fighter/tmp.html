@@ -1,161 +1,75 @@
 {% extends "fighter/base.html" %}
 {% block content %}
-<!--<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>-->
+<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
 
+<style>
+	
+	#hide-block-one {
+		width: 400px;
+		height: 200px;
+		margin: 10% auto;
+		background: black;
+		text-align: center;
+		color: white;
+		cursor:pointer;
+	}
+
+	#hide-block-two {
+		width: 400px;
+		height: 200px;
+		margin: 10% auto;
+		background: black;
+		text-align: center;
+		display: none;
+		color: white;
+		cursor:pointer;
+	}
+	
+</style>
+
+<div id="click-back">back</div>
+<div id="click-next">next</div>
+
+<div class="parent"
+	<div id="hide-block-one">
+		<p>I'm hide-block-one</p>
+	</div>
+</div>
 
 <script>
-	window.addEventListener("DOMContentLoaded", function() {
-		var x = 0;
-		var br = document.createElement("br");
-		function genButtons(a) {
-		
-			var listBtns = "{{ stack.buttons }}".split(' ')
-			var parent = document.getElementById('_buttons'),
-			inp = parent.querySelectorAll("[id^='b']");
-			[].forEach.call(inp, function(btn){
-				parent.removeChild(btn)
-			});
-			a.slice(0, 4).forEach(function(str, x){
-				var btn = document.createElement("input");
-				btn.id = "b" + x;
-				btn.value = str;
-				btn.type = "button";
-				btn.className = "btns";
-				if ((x - 2)%2 == 0) {
-					// document.getElementById('_buttons').appendChild(btn)
-					document.getElementById('_buttons').appendChild(br)
-				}
-				parent.appendChild(btn)
+	console.log('Hello world again')
+</script>
 
-				btn.addEventListener("click", function(){
-					genButtons(a.slice(4))
-					var valueForm = myform.field.value += ' ' + this.value;
-					var newValueFormFormat = $.trim(valueForm)
-					var text = document.getElementById('_buttons').value
-					// var english = "{{ stack.english }}"
-					// var russia = "{{ stack.russia }}".split(' ')
-
-					var lenVFF = newValueFormFormat.split(' ')
-					var splitEnglish = english.split(' ')
-
-					if($.trim(text)  == english) {
-						alert('good')
-						$(document).ready(function() {
-							$.ajax({
-								url: "",
-								type: "POST",
-								data: $("#myform").serialize(),
-								success: function(html) {
-									$("body").html(html)
-									$("#myform")[0].reset()
-									// location.reload()
-									genButtons(listBtns)
-								}
-							})
-						})
-
-					}else if(lenVFF.length >= splitEnglish.length) {
-						alert('no')
-						$(document).ready(function() {
-							$.ajax({
-								url: "",
-								type: "GET",
-								data: $("#myform").serialize(),
-								success: function(html) {
-									$("body").html(html)
-									$("#myform")[0].reset()
-									// location.reload()
-									genButtons(listBtns)
-								}
-							})
-						})
-					}
-
-
-				})
-			})
-		}
-	// var something = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
-	var listBtns = "{{ stack.buttons }}".split(' ')
-	genButtons(listBtns)
+<script>
+var spam = ['hello', 'a', 'little', 'few', 'little', 'a', 'home', 'world', 'a', 'little']
+spam.forEach(function(elem, index, arr) {
+	if (spam[index] == 'a' && spam[index + 1] == 'little') {  
+		spam[index] = spam[index].toString() + 'little';
+		arr.splice(index + 1, 1)
+	}
 })
+console.log(spam)
 </script>
 
+<!-- <div id="hide-block-two">
+	<p>I'm hide-block-two</p>
+</div>
 
-<body style="background: #2B3D52">
+	<script>
+		$('#click-next').click(function() {
+			// $('#hide-block-one').fadeToggle('slow')
 
-<script>
-    function setFocus() {
-        document.getElementById("text").focus();
-    }
-    setFocus()
-</script>
+			$('#hide-block-one').hide('slow');
+			$('#hide-block-two').show('slow');
+		})
 
-<div id="block">
-    <center>
-    <p style="color: red">{{ message }}</p>
-    <div id="showRU" class="sentence">
-        {{ stack.russia }}<br />
-    </div>
+		$('#click-back').click(function() {
+			$('#hide-block-one').show('slow');
+			$('#hide-block-two').hide('slow');
+		})
 
-    <form id="myform" onsubmit="foo(); return false;" name='myform' >{% csrf_token %}
-        <input id="text" name="field" type="text" autocomplete="off" autofocus="on">
-    </form>
-    <button class="btnInViews" onclick="dell_word()">Dell</button>
-
-    <div id="_buttons"></div>
-    <script>
-        var listBtns = "{{ stack.buttons }}".split(' ')
-        var english = "{{ stack.english }}"
-        var russia = "{{ stack.russia }}".split(' ')
-    </script>
-
-    <!--<script src="/static/fighter/js/lesson.js"></script>-->
-
-    </center>
-    </div>
-</body>
-<!--<script>
-
-        var valueForm = myform.field.value += ' ' + this.value;
-        var newValueFormFormat = $.trim(valueForm)
-        var text = document.getElementById('text').value
-        // var english = "{{ stack.english }}"
-        // var russia = "{{ stack.russia }}".split(' ')
-
-        var lenVFF = newValueFormFormat.split(' ')
-        var splitEnglish = english.split(' ')
-
-        if($.trim(text)  == english) {
-            alert('good')
-            $(document).ready(function() {
-                $.ajax({
-                    url: "",
-                    type: "POST",
-                    data: $("#myform").serialize(),
-                    success: function(html) {
-                        $("body").html(html)
-                        $("#myform")[0].reset()
-                    }
-                })
-            })
-
-        }else if(lenVFF.length >= splitEnglish.length) {
-            alert('no')
-            $(document).ready(function() {
-                $.ajax({
-                    url: "",
-                    type: "GET",
-                    data: $("#myform").serialize(),
-                    success: function(html) {
-                        $("body").html(html)
-                        $("#myform")[0].reset()
-                    }
-                })
-            })
-        }
-</script>-->
-
+	</script>
+ -->
 
 
 {% endblock %}

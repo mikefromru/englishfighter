@@ -58,39 +58,35 @@ LANGUAGE_CODE	../englishfighter/settings.py	/^LANGUAGE_CODE = 'ru-Ru'$/;"	kind:v
 LOGIN_REDIRECT_URL	../englishfighter/settings.py	/^LOGIN_REDIRECT_URL = '\/'$/;"	kind:variable	line:186
 LOGOUT_REDIRECT_URL	../englishfighter/settings.py	/^LOGOUT_REDIRECT_URL =  '\/'$/;"	kind:variable	line:187
 LessonFive	../fighter/models.py	/^class LessonFive(models.Model):$/;"	kind:class	line:48
-LessonFiveForm	../fighter/forms.py	/^class LessonFiveForm(forms.ModelForm):$/;"	kind:class	line:32
+LessonFiveForm	../fighter/forms.py	/^class LessonFiveForm(forms.ModelForm):$/;"	kind:class	line:31
 LessonFour	../fighter/models.py	/^class LessonFour(models.Model):$/;"	kind:class	line:37
-LessonFourForm	../fighter/forms.py	/^class LessonFourForm(forms.ModelForm):$/;"	kind:class	line:27
+LessonFourForm	../fighter/forms.py	/^class LessonFourForm(forms.ModelForm):$/;"	kind:class	line:26
 LessonOne	../fighter/models.py	/^class LessonOne(models.Model):$/;"	kind:class	line:4
-LessonOneForm	../fighter/forms.py	/^class LessonOneForm(forms.ModelForm):$/;"	kind:class	line:12
-LessonSeven	../fighter/models.py	/^class LessonSeven(models.Model):$/;"	kind:class	line:70
-LessonSevenForm	../fighter/forms.py	/^class LessonSevenForm(forms.ModelForm):$/;"	kind:class	line:42
+LessonOneForm	../fighter/forms.py	/^class LessonOneForm(forms.ModelForm):$/;"	kind:class	line:11
 LessonSix	../fighter/models.py	/^class LessonSix(models.Model):$/;"	kind:class	line:59
-LessonSixForm	../fighter/forms.py	/^class LessonSixForm(forms.ModelForm):$/;"	kind:class	line:37
+LessonSixForm	../fighter/forms.py	/^class LessonSixForm(forms.ModelForm):$/;"	kind:class	line:36
 LessonThree	../fighter/models.py	/^class LessonThree(models.Model):$/;"	kind:class	line:26
-LessonThreeForm	../fighter/forms.py	/^class LessonThreeForm(forms.ModelForm):$/;"	kind:class	line:22
+LessonThreeForm	../fighter/forms.py	/^class LessonThreeForm(forms.ModelForm):$/;"	kind:class	line:21
 LessonTwo	../fighter/models.py	/^class LessonTwo(models.Model):$/;"	kind:class	line:15
-LessonTwoForm	../fighter/forms.py	/^class LessonTwoForm(forms.ModelForm):$/;"	kind:class	line:17
+LessonTwoForm	../fighter/forms.py	/^class LessonTwoForm(forms.ModelForm):$/;"	kind:class	line:16
 MEDIA_ROOT	../englishfighter/settings.py	/^MEDIA_ROOT = os.path.join(BASE_DIR, 'media')$/;"	kind:variable	line:217
 MEDIA_URL	../englishfighter/settings.py	/^MEDIA_URL = '\/media\/'$/;"	kind:variable	line:218
 MIDDLEWARE	../englishfighter/settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:58
 Meta	../accounts/forms.py	/^    class Meta:$/;"	kind:class	line:11
 Meta	../accounts/forms.py	/^    class Meta:$/;"	kind:class	line:6
 Meta	../accounts/models.py	/^    class Meta:$/;"	kind:class	line:17
-Meta	../fighter/forms.py	/^    class Meta:$/;"	kind:class	line:13
-Meta	../fighter/forms.py	/^    class Meta:$/;"	kind:class	line:18
-Meta	../fighter/forms.py	/^    class Meta:$/;"	kind:class	line:23
-Meta	../fighter/forms.py	/^    class Meta:$/;"	kind:class	line:28
-Meta	../fighter/forms.py	/^    class Meta:$/;"	kind:class	line:33
-Meta	../fighter/forms.py	/^    class Meta:$/;"	kind:class	line:38
-Meta	../fighter/forms.py	/^    class Meta:$/;"	kind:class	line:43
+Meta	../fighter/forms.py	/^    class Meta:$/;"	kind:class	line:12
+Meta	../fighter/forms.py	/^    class Meta:$/;"	kind:class	line:17
+Meta	../fighter/forms.py	/^    class Meta:$/;"	kind:class	line:22
+Meta	../fighter/forms.py	/^    class Meta:$/;"	kind:class	line:27
+Meta	../fighter/forms.py	/^    class Meta:$/;"	kind:class	line:32
+Meta	../fighter/forms.py	/^    class Meta:$/;"	kind:class	line:37
 Meta	../fighter/models.py	/^    class Meta:$/;"	kind:class	line:12
 Meta	../fighter/models.py	/^    class Meta:$/;"	kind:class	line:23
 Meta	../fighter/models.py	/^    class Meta:$/;"	kind:class	line:34
 Meta	../fighter/models.py	/^    class Meta:$/;"	kind:class	line:45
 Meta	../fighter/models.py	/^    class Meta:$/;"	kind:class	line:56
 Meta	../fighter/models.py	/^    class Meta:$/;"	kind:class	line:67
-Meta	../fighter/models.py	/^    class Meta:$/;"	kind:class	line:78
 Migration	../accounts/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:10
 Migration	../accounts/migrations/0002_auto_20170411_1745.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:10
 Migration	../accounts/migrations/0003_auto_20170411_1850.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:9
@@ -164,7 +160,6 @@ __str__	../fighter/models.py	/^    def __str__(self):$/;"	kind:member	line:31
 __str__	../fighter/models.py	/^    def __str__(self):$/;"	kind:member	line:42
 __str__	../fighter/models.py	/^    def __str__(self):$/;"	kind:member	line:53
 __str__	../fighter/models.py	/^    def __str__(self):$/;"	kind:member	line:64
-__str__	../fighter/models.py	/^    def __str__(self):$/;"	kind:member	line:75
 __str__	../fighter/models.py	/^    def __str__(self):$/;"	kind:member	line:9
 __unicode__	../accounts/models.py	/^    def __unicode__(self):$/;"	kind:member	line:14
 about	../accounts/models.py	/^    about = models.TextField(blank=True)$/;"	kind:variable	line:11
@@ -172,7 +167,7 @@ activate.html.py	../templates/registration/activate.html.py	1;"	kind:file	line:1
 activation_complete.html.py	../templates/registration/activation_complete.html.py	1;"	kind:file	line:1
 activation_email.txt.py	../templates/registration/activation_email.txt.py	1;"	kind:file	line:1
 activation_email_subject.txt.py	../templates/registration/activation_email_subject.txt.py	1;"	kind:file	line:1
-addition	../fighter/views.py	/^def addition(request):$/;"	kind:function	line:32
+addition	../fighter/views.py	/^def addition(request):$/;"	kind:function	line:38
 admin.py	../accounts/admin.py	1;"	kind:file	line:1
 admin.py	../fighter/admin.py	1;"	kind:file	line:1
 application	../englishfighter/wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
@@ -185,11 +180,10 @@ buttons	../fighter/models.py	/^    buttons = models.TextField()$/;"	kind:variabl
 buttons	../fighter/models.py	/^    buttons = models.TextField()$/;"	kind:variable	line:51
 buttons	../fighter/models.py	/^    buttons = models.TextField()$/;"	kind:variable	line:62
 buttons	../fighter/models.py	/^    buttons = models.TextField()$/;"	kind:variable	line:7
-buttons	../fighter/models.py	/^    buttons = models.TextField()$/;"	kind:variable	line:73
 can_delete	../accounts/admin.py	/^    can_delete = False$/;"	kind:variable	line:9
 city	../accounts/models.py	/^    city = models.CharField(max_length=30, blank=True)$/;"	kind:variable	line:10
 create_user_profile	../accounts/models.py	/^def create_user_profile(sender, instance, created, **kwargs):$/;"	kind:function	line:22
-data_edit	../fighter/views.py	/^def data_edit(request, pk):$/;"	kind:function	line:50
+data_edit	../fighter/views.py	/^def data_edit(request, pk):$/;"	kind:function	line:51
 dependencies	../accounts/migrations/0001_initial.py	/^    dependencies = [$/;"	kind:variable	line:14
 dependencies	../accounts/migrations/0002_auto_20170411_1745.py	/^    dependencies = [$/;"	kind:variable	line:12
 dependencies	../accounts/migrations/0003_auto_20170411_1850.py	/^    dependencies = [$/;"	kind:variable	line:11
@@ -218,7 +212,6 @@ english	../fighter/models.py	/^    english = models.CharField(max_length=250)$/;
 english	../fighter/models.py	/^    english = models.CharField(max_length=250)$/;"	kind:variable	line:50
 english	../fighter/models.py	/^    english = models.CharField(max_length=250)$/;"	kind:variable	line:6
 english	../fighter/models.py	/^    english = models.CharField(max_length=250)$/;"	kind:variable	line:61
-english	../fighter/models.py	/^    english = models.CharField(max_length=250)$/;"	kind:variable	line:72
 field	../accounts/migrations/0002_auto_20170411_1745.py	/^            field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='userprofile', to=settings.AUTH_USER_MODEL),$/;"	kind:variable	line:20
 field	../accounts/migrations/0003_auto_20170411_1850.py	/^            field=models.CharField(blank=True, max_length=30),$/;"	kind:variable	line:25
 field	../accounts/migrations/0003_auto_20170411_1850.py	/^            field=models.ImageField(blank=True, default=django.utils.timezone.now, upload_to='avatars\/', verbose_name='Изображения'),$/;"	kind:variable	line:19
@@ -236,13 +229,12 @@ field	../fighter/migrations/0011_auto_20170710_1208.py	/^            field=model
 fields	../accounts/forms.py	/^        fields = ('city', 'about', 'points', 'avatar')$/;"	kind:variable	line:13
 fields	../accounts/forms.py	/^        fields = ('first_name', 'last_name', 'email')$/;"	kind:variable	line:8
 fields	../accounts/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:21
-fields	../fighter/forms.py	/^        fields = ('russia', 'english', 'buttons')$/;"	kind:variable	line:15
-fields	../fighter/forms.py	/^        fields = ('russia', 'english', 'buttons')$/;"	kind:variable	line:20
-fields	../fighter/forms.py	/^        fields = ('russia', 'english', 'buttons')$/;"	kind:variable	line:25
-fields	../fighter/forms.py	/^        fields = ('russia', 'english', 'buttons')$/;"	kind:variable	line:30
-fields	../fighter/forms.py	/^        fields = ('russia', 'english', 'buttons')$/;"	kind:variable	line:35
-fields	../fighter/forms.py	/^        fields = ('russia', 'english', 'buttons')$/;"	kind:variable	line:40
-fields	../fighter/forms.py	/^        fields = ('russia', 'english', 'buttons')$/;"	kind:variable	line:45
+fields	../fighter/forms.py	/^        fields = ('russia', 'english', 'buttons')$/;"	kind:variable	line:14
+fields	../fighter/forms.py	/^        fields = ('russia', 'english', 'buttons')$/;"	kind:variable	line:19
+fields	../fighter/forms.py	/^        fields = ('russia', 'english', 'buttons')$/;"	kind:variable	line:24
+fields	../fighter/forms.py	/^        fields = ('russia', 'english', 'buttons')$/;"	kind:variable	line:29
+fields	../fighter/forms.py	/^        fields = ('russia', 'english', 'buttons')$/;"	kind:variable	line:34
+fields	../fighter/forms.py	/^        fields = ('russia', 'english', 'buttons')$/;"	kind:variable	line:39
 fields	../fighter/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:21
 fields	../fighter/migrations/0005_stack.py	/^            fields=[$/;"	kind:variable	line:19
 fields	../fighter/migrations/0006_auto_20170423_1540.py	/^            fields=[$/;"	kind:variable	line:17
@@ -254,27 +246,29 @@ fields	../fighter/migrations/0012_lessonfive_lessonfour_lessonseven_lessonsix_le
 fields	../fighter/migrations/0012_lessonfive_lessonfour_lessonseven_lessonsix_lessonthree.py	/^            fields=[$/;"	kind:variable	line:65
 forms.py	../accounts/forms.py	1;"	kind:file	line:1
 forms.py	../fighter/forms.py	1;"	kind:file	line:1
-index	../fighter/views.py	/^def index(request):$/;"	kind:function	line:13
+index	../fighter/views.py	/^def index(request):$/;"	kind:function	line:18
 initial	../accounts/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:12
 initial	../fighter/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:12
 initial	../fighter/migrations/0005_stack.py	/^    initial = True$/;"	kind:variable	line:10
 inlines	../accounts/admin.py	/^    inlines = (UserInline,)$/;"	kind:variable	line:13
-lesson_one	../fighter/views.py	/^def lesson_one(request):$/;"	kind:function	line:85
-lesson_two	../fighter/views.py	/^def lesson_two(request):$/;"	kind:function	line:108
-listdata	../fighter/views.py	/^def listdata(request):$/;"	kind:function	line:73
+lesson_five	../fighter/views.py	/^def lesson_five(request):$/;"	kind:function	line:166
+lesson_four	../fighter/views.py	/^def lesson_four(request):$/;"	kind:function	line:149
+lesson_one	../fighter/views.py	/^def lesson_one(request):$/;"	kind:function	line:84
+lesson_three	../fighter/views.py	/^def lesson_three(request):$/;"	kind:function	line:132
+lesson_two	../fighter/views.py	/^def lesson_two(request):$/;"	kind:function	line:109
+listdata	../fighter/views.py	/^def listdata(request):$/;"	kind:function	line:72
 login.html.py	../templates/registration/login.html.py	1;"	kind:file	line:1
 logout.html.py	../templates/registration/logout.html.py	1;"	kind:file	line:1
 manage.py	../manage.py	1;"	kind:file	line:1
 model	../accounts/admin.py	/^    model = UserProfile$/;"	kind:variable	line:8
 model	../accounts/forms.py	/^        model = User$/;"	kind:variable	line:7
 model	../accounts/forms.py	/^        model = UserProfile $/;"	kind:variable	line:12
-model	../fighter/forms.py	/^        model = LessonFive$/;"	kind:variable	line:34
-model	../fighter/forms.py	/^        model = LessonFour$/;"	kind:variable	line:29
-model	../fighter/forms.py	/^        model = LessonOne$/;"	kind:variable	line:14
-model	../fighter/forms.py	/^        model = LessonSeven$/;"	kind:variable	line:44
-model	../fighter/forms.py	/^        model = LessonSix$/;"	kind:variable	line:39
-model	../fighter/forms.py	/^        model = LessonThree$/;"	kind:variable	line:24
-model	../fighter/forms.py	/^        model = LessonTwo$/;"	kind:variable	line:19
+model	../fighter/forms.py	/^        model = LessonFive$/;"	kind:variable	line:33
+model	../fighter/forms.py	/^        model = LessonFour$/;"	kind:variable	line:28
+model	../fighter/forms.py	/^        model = LessonOne$/;"	kind:variable	line:13
+model	../fighter/forms.py	/^        model = LessonSix$/;"	kind:variable	line:38
+model	../fighter/forms.py	/^        model = LessonThree$/;"	kind:variable	line:23
+model	../fighter/forms.py	/^        model = LessonTwo$/;"	kind:variable	line:18
 model_name	../accounts/migrations/0002_auto_20170411_1745.py	/^            model_name='userprofile',$/;"	kind:variable	line:18
 model_name	../accounts/migrations/0003_auto_20170411_1850.py	/^            model_name='userprofile',$/;"	kind:variable	line:17
 model_name	../accounts/migrations/0003_auto_20170411_1850.py	/^            model_name='userprofile',$/;"	kind:variable	line:23
@@ -293,7 +287,7 @@ model_name	../fighter/migrations/0010_auto_20170710_1204.py	/^            model_
 model_name	../fighter/migrations/0011_auto_20170710_1208.py	/^            model_name='lessontwo',$/;"	kind:variable	line:16
 models.py	../accounts/models.py	1;"	kind:file	line:1
 models.py	../fighter/models.py	1;"	kind:file	line:1
-myadmin	../fighter/views.py	/^def myadmin(request):$/;"	kind:function	line:26
+myadmin	../fighter/views.py	/^def myadmin(request):$/;"	kind:function	line:32
 name	../accounts/apps.py	/^    name = 'accounts'$/;"	kind:variable	line:5
 name	../accounts/migrations/0001_initial.py	/^            name='UserProfile',$/;"	kind:variable	line:20
 name	../accounts/migrations/0002_auto_20170411_1745.py	/^            name='user',$/;"	kind:variable	line:19
@@ -382,15 +376,13 @@ russia	../fighter/models.py	/^    russia = models.CharField(max_length=250)$/;"	
 russia	../fighter/models.py	/^    russia = models.CharField(max_length=250)$/;"	kind:variable	line:49
 russia	../fighter/models.py	/^    russia = models.CharField(max_length=250)$/;"	kind:variable	line:5
 russia	../fighter/models.py	/^    russia = models.CharField(max_length=250)$/;"	kind:variable	line:60
-russia	../fighter/models.py	/^    russia = models.CharField(max_length=250)$/;"	kind:variable	line:71
 save_user_profile	../accounts/models.py	/^def save_user_profile(sender, instance, **kwargs):$/;"	kind:function	line:27
 search_fields	../fighter/admin.py	/^    search_fields = ('russia', 'id')$/;"	kind:variable	line:17
 settings.py	../englishfighter/settings.py	1;"	kind:file	line:1
 settings_local.py	../englishfighter/settings_local.py	1;"	kind:file	line:1
 tests.py	../accounts/tests.py	1;"	kind:file	line:1
 tests.py	../fighter/tests.py	1;"	kind:file	line:1
-tmp	../fighter/views.py	/^def tmp(request):$/;"	kind:function	line:131
-tmp_two	../fighter/views.py	/^def tmp_two(request):$/;"	kind:function	line:146
+tmp	../fighter/views.py	/^def tmp(request):$/;"	kind:function	line:187
 urlpatterns	../accounts/urls.py	/^urlpatterns = [$/;"	kind:variable	line:4
 urlpatterns	../englishfighter/urls.py	/^urlpatterns = [$/;"	kind:variable	line:27
 urlpatterns	../fighter/urls.py	/^urlpatterns = [$/;"	kind:variable	line:4
@@ -402,8 +394,7 @@ verbose_name	../accounts/models.py	/^        verbose_name = 'Профиль'$/;"
 verbose_name	../fighter/models.py	/^        verbose_name = 'LessonFive'$/;"	kind:variable	line:57
 verbose_name	../fighter/models.py	/^        verbose_name = 'LessonFour'$/;"	kind:variable	line:46
 verbose_name	../fighter/models.py	/^        verbose_name = 'LessonOne'$/;"	kind:variable	line:13
-verbose_name	../fighter/models.py	/^        verbose_name = 'LessonSeven'$/;"	kind:variable	line:79
-verbose_name	../fighter/models.py	/^        verbose_name = 'LessonSix'$/;"	kind:variable	line:68
+verbose_name	../fighter/models.py	/^        verbose_name = 'LessonSix'/;"	kind:variable	line:68
 verbose_name	../fighter/models.py	/^        verbose_name = 'LessonThree'$/;"	kind:variable	line:35
 verbose_name	../fighter/models.py	/^        verbose_name = 'LessonTwo'$/;"	kind:variable	line:24
 verbose_name_plural	../accounts/admin.py	/^    verbose_name_plural = "Доп. информация"$/;"	kind:variable	line:10

@@ -11,15 +11,17 @@
 <!--<body class="bodycolor">-->
 <!--<body>-->
 
+    <a href="/fighter/tmp">tmp</a>
+
 <body style="background: #2B3D52">
 
-    <center><div>The app is developing</div></center><br /><br />
+    <!-- <center><div>The app is developing.</div></center><br /><br /> -->
 
     <!-- <div id="parent"> -->
     <div class="wrap">
         <div class="lessonstart" onclick="location.href='/lesson_one/';">
             <div id="color-one">
-                <div class="position">Базовая форма глагола</div><br />
+                <div class="position">To be</div><br />
                     <div class="progressbar"><div id="onebar"></div></div>
             </div>
         </div>
@@ -37,13 +39,13 @@
     <div class="wrap">
         <div class="lessonstart" onclick="location.href='/lesson_three/';">
             <div id="color-three">
-                <div class="position">Three lesson</div><br />
+                <div class="position">Past continuous, Present continuous, Future continuous</div><br />
                     <div class="progressbar"><div id="threebar"></div></div>
             </div>
         </div>
-        <div class="lessonstart" onclick="location.href='#';">
+        <div class="lessonstart" onclick="location.href='/lesson_four/';">
             <div id="color-four">
-                <div class="position">Four lesson</div><br />
+                <div class="position">Present perfect</div><br />
                     <div class="progressbar"><div id="fourbar"></div></div>
             </div>
         </div>
@@ -53,9 +55,9 @@
     </div>
 
     <div class="wrap">
-        <div class="lessonstart" onclick="location.href='#';">
+        <div class="lessonstart" onclick="location.href='/lesson_five/';">
             <div id="color-five">
-                <div class="position">Five lesson</div><br />
+                <div class="position">Some-any, much-many, few-little</div><br />
                     <div class="progressbar"><div id="fivebar"></div></div>
             </div>
         </div>
@@ -70,36 +72,34 @@
         <!-- </div> -->
     </div>
     
-<!-- 
-    <div class="wrap">
-        <div class="lessonstart" onclick="location.href='#';">
-            <div class="color">Tenth lesson</div>
-        </div>
-        <div class="lessonstart" onclick="location.href='#';">
-            <div class="color">The eleventh lesson</div>
-        </div>
-        <div class="lessonstart" onclick="location.href='#';">
-            <div class="color">The twelfth lesson</div>
-        </div>
-    </div> -->
-<!-- 
+<!-- tmp tmp tmp  -->
+    <!-- <div class="wrap"> -->
+        <!-- <div class="lessonstart" onclick="location.href='#';"> -->
+            <!-- <div class="color">Tenth lesson</div> -->
+        <!-- </div> -->
+        <!-- <div class="lessonstart" onclick="location.href='#';"> -->
+            <!-- <div class="color">The eleventh lesson</div> -->
+        <!-- </div> -->
+        <!-- <div class="lessonstart" onclick="location.href='#';"> -->
+            <!-- <div class="color">The twelfth lesson</div> -->
+        <!-- </div> -->
+    <!-- </div> -->
+
     <div class="wrap">
         <div class="lessonstart" onclick="location.href='#';">
             <div class="color">The thirteenth lesson</div>
         </div>
         <div class="lessonstart" onclick="location.href='#';">
             <div class="color">The fourteenth lesson</div>
-        </div>
-        <div class="lessonstart" onclick="location.href='#';">
-            <div class="color">The fifteenth lesson</div>
-        </div>
-    </div> -->
-<!-- </div> -->
+        </div>;
+        <!-- <div class="lessonstart" onclick="location.href='#';"> -->
+            <!-- <div class="color">The fifteenth lesson</div> -->
+        <!-- </div> -->
+    </div>
+    
     <script>
         var points = "{{ points_user }}"
         var progress_line = "{{ profile_pointsProgressBar }}"
-        console.log(points, 'points of user')
-        console.log(progress_line)
     </script>
 </body>
 {% endblock %}
