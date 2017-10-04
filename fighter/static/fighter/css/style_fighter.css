@@ -283,6 +283,49 @@ a {
     border-radius: 3px;
 }
 
+#color-seven {
+    text-align: center;
+    background: linear-gradient(to right, #575ACB, #9950DE);
+    height: 100%;
+    border-radius: 3px;
+}
+
+#color-eight {
+    text-align: center;
+    background: linear-gradient(to right, #972AE2, #F74592);
+    height: 100%;
+    border-radius: 3px;
+}
+
+#color-nine {
+    text-align: center;
+    background: linear-gradient(to right, #22CACE, #36B8D0);
+    height: 100%;
+    border-radius: 3px;
+}
+
+#color-ten {
+    text-align: center;
+    background: linear-gradient(to right, #FF6622, #FF2EAF);
+    height: 100%;
+    border-radius: 3px;
+}
+
+#color-eleven {
+    text-align: center;
+    background: linear-gradient(to right, #9950DE, #575ACB);
+    height: 100%;
+    border-radius: 3px;
+}
+
+
+#color-twelve {
+    text-align: center;
+    background: linear-gradient(to right, #14D0BA, #03A792);
+    height: 100%;
+    border-radius: 3px;
+}
+
 /* ############## PROGRESS BAR ############### PROGRESS BAR ################### */
 .progressbar {
     width: 70%;
@@ -339,6 +382,40 @@ a {
     height: 1px;
     background-color: #00FF7F;
 }
+
+
+#sevenbar {
+    width: 0%;
+    height: 1px;
+    background-color: #00FF7F;
+}
+
+#eightbar {
+    width: 0%;
+    height: 1px;
+    background-color: #00FF7F;
+}
+#ninebar {
+    width: 0%;
+    height: 1px;
+    background-color: #00FF7F;
+}
+#tenbar {
+    width: 0%;
+    height: 1px;
+    background-color: #00FF7F;
+}
+#elevenbar {
+    width: 0%;
+    height: 1px;
+    background-color: #00FF7F;
+}
+#twelvebar {
+    width: 0%;
+    height: 1px;
+    background-color: #00FF7F;
+}
+
 
 #text {
     position: relative;
