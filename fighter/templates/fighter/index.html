@@ -2,41 +2,39 @@
 {% load staticfiles %}
 {% block content %}
 
-<script>
-    $(window).ready(function() {
-        setTimeout("$('.lessonstart').fadeIn('slow');", 200);
-    })
-</script>
+<!-- <a href="/fighter/tmp">tmp</a> -->
 
-<!--<body class="bodycolor">-->
-<!--<body>-->
+<!-- <div id="click-next"><img src="{% static 'fighter/img/next.png' %}"></div> -->
+<!-- <div id="click-back"><img src="{% static 'fighter/img/back.png' %}"></div> -->
 
-    <a href="/fighter/tmp">tmp</a>
-
+                                   
 <body style="background: #2B3D52">
+<!-- <center><div>The app is developing.</div></center><br /><br /> -->
 
-    <!-- <center><div>The app is developing.</div></center><br /><br /> -->
+<div id="circle1"></div>
+<div id="circle2"></div>
 
-    <!-- <div id="parent"> -->
+<div id="block">
+    <div id="click-back"><img src="{% static 'fighter/img/back.png' %}"></div>
+    <div id="click-next"><img src="{% static 'fighter/img/next.png' %}"></div>
+<div id="div_number_one">
     <div class="wrap">
         <div class="lessonstart" onclick="location.href='/lesson_one/';">
             <div id="color-one">
                 <div class="position">To be</div><br />
-                    <div class="progressbar"><div id="onebar"></div></div>
+                <div class="progressbar"><div id="onebar"></div></div>
             </div>
         </div>
         <div class="lessonstart" onclick="location.href='/lesson_two/';">
             <div id="color-two">
                 <div class="position">Past simple, Present simple, Future simple</div><br />
-                    <div id="progressbar"><div id="twobar"></div></div>
+                <div id="progressbar"><div id="twobar"></div></div>
             </div>
         </div>
-        <!-- <div class="lessonstart" onclick="location.href='#';"> -->
-            <!-- <div class="color">Third lesson</div> -->
-        <!-- </div> -->
     </div>
 
     <div class="wrap">
+        <!-- <div id="click-back"><img src="{% static 'fighter/img/back.png' %}"></div> -->
         <div class="lessonstart" onclick="location.href='/lesson_three/';">
             <div id="color-three">
                 <div class="position">Past continuous, Present continuous, Future continuous</div><br />
@@ -46,12 +44,10 @@
         <div class="lessonstart" onclick="location.href='/lesson_four/';">
             <div id="color-four">
                 <div class="position">Present perfect</div><br />
-                    <div class="progressbar"><div id="fourbar"></div></div>
+                <div class="progressbar"><div id="fourbar"></div></div>
             </div>
         </div>
-        <!-- <div class="lessonstart" onclick="location.href='#';"> -->
-            <!-- <div class="color">Sixth lesson</div> -->
-        <!-- </div> -->
+        <!-- <div id="click-next"><img src="{% static 'fighter/img/next.png' %}"></div> -->
     </div>
 
     <div class="wrap">
@@ -67,39 +63,61 @@
                     <div class="progressbar"><div id="sixbar"></div></div>
             </div>
         </div>
-        <!-- <div class="lessonstart" onclick="location.href='#';"> -->
-            <!-- <div class="color">Ninth lesson</div> -->
-        <!-- </div> -->
     </div>
-    
-<!-- tmp tmp tmp  -->
-    <!-- <div class="wrap"> -->
-        <!-- <div class="lessonstart" onclick="location.href='#';"> -->
-            <!-- <div class="color">Tenth lesson</div> -->
-        <!-- </div> -->
-        <!-- <div class="lessonstart" onclick="location.href='#';"> -->
-            <!-- <div class="color">The eleventh lesson</div> -->
-        <!-- </div> -->
-        <!-- <div class="lessonstart" onclick="location.href='#';"> -->
-            <!-- <div class="color">The twelfth lesson</div> -->
-        <!-- </div> -->
-    <!-- </div> -->
+</div>
+
+<div id="div_number_two">
+    <div class="wrap">
+        <div class="lessonstart" onclick="location.href='#';">
+            <div id="color-seven">
+                <div class="color">The seven lesson</div>
+                    <div class="progressbar"><div id="sevenbar"></div></div>
+            </div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div id="color-eight">
+                <div class="color">The eight lesson</div>
+                    <div class="progressbar"><div id="eightbar"></div></div>
+            </div>
+        </div>
+    </div>
 
     <div class="wrap">
         <div class="lessonstart" onclick="location.href='#';">
-            <div class="color">The thirteenth lesson</div>
+            <div id="color-nine">
+                <div class="color">The nine lesson</div>
+                    <div class="progressbar"><div id="ninebar"></div></div>
+            </div>
         </div>
         <div class="lessonstart" onclick="location.href='#';">
-            <div class="color">The fourteenth lesson</div>
-        </div>;
-        <!-- <div class="lessonstart" onclick="location.href='#';"> -->
-            <!-- <div class="color">The fifteenth lesson</div> -->
-        <!-- </div> -->
+            <div id="color-ten">
+                <div class="color">The ten lesson</div>
+                    <div class="progressbar"><div id="tenbar"></div></div>
+            </div>
+        </div>
     </div>
-    
-    <script>
-        var points = "{{ points_user }}"
-        var progress_line = "{{ profile_pointsProgressBar }}"
-    </script>
+
+    <div class="wrap">
+        <div class="lessonstart" onclick="location.href='#';">
+            <div id="color-eleven">
+                <div class="color">The eleven lesson</div>
+                    <div class="progressbar"><div id="elevenbar"></div></div>
+            </div>
+        </div>
+        <div class="lessonstart" onclick="location.href='#';">
+            <div id="color-twelve">
+                <div class="color">The twelve lesson</div>
+                    <div class="progressbar"><div id="twelvebar"></div></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    var points = "{{ points_user }}"
+    var progress_line = "{{ profile_pointsProgressBar }}"
+</script>
+
 </body>
 {% endblock %}

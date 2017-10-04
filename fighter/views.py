@@ -54,7 +54,6 @@ def data_edit(request, pk):
         return HttpResponseNotFound("<h1>Page not found</h1>")
 
     amount = LessonFive.objects.all()
-    # some = get_object_or_404(LessonOne, pk=pk)
     some = get_object_or_404(LessonFive, pk=pk)
 
     if request.POST.get('delete'):
@@ -74,7 +73,6 @@ def listdata(request):
     if not request.user.is_superuser:
         return HttpResponseNotFound("<h1>Page not found</h1>")
 
-    # data = LessonOne.objects.order_by("-id")
     data = LessonFive.objects.order_by("-id")
     return render(request, 'fighter/listdata.html', {
         'data': data, 'amount': len(data)})
@@ -153,7 +151,7 @@ def lesson_four(request):
         return HttpResponseRedirect('/accounts/login')
 
     message = 'Present perfect' 
-    stack = LessonFour.objects.all().last()
+    stack = LessonOne.objects.order_by('?')[0]
     if request.method == "POST":
         profile = UserProfile.objects.get(user=request.user)
         if profile.points >= 1600:
@@ -173,9 +171,7 @@ def lesson_five(request):
         return HttpResponseRedirect('/accounts/login')
 
     message = 'Some-any, much-many, few-little' 
-    # stack = LessonFour.objects.order_by('?')[0]
-    # stack = LessonThree.objects.order_by()[77]
-    stack = LessonFive.objects.all().last()
+    stack = LessonFour.objects.order_by('?')[0]
     if request.method == "POST":
         profile = UserProfile.objects.get(user=request.user)
         profile.points += 2

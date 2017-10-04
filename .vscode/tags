@@ -167,7 +167,7 @@ activate.html.py	../templates/registration/activate.html.py	1;"	kind:file	line:1
 activation_complete.html.py	../templates/registration/activation_complete.html.py	1;"	kind:file	line:1
 activation_email.txt.py	../templates/registration/activation_email.txt.py	1;"	kind:file	line:1
 activation_email_subject.txt.py	../templates/registration/activation_email_subject.txt.py	1;"	kind:file	line:1
-addition	../fighter/views.py	/^def addition(request):$/;"	kind:function	line:38
+addition	../fighter/views.py	/^def addition(request):$/;"	kind:function	line:39
 admin.py	../accounts/admin.py	1;"	kind:file	line:1
 admin.py	../fighter/admin.py	1;"	kind:file	line:1
 application	../englishfighter/wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
@@ -183,7 +183,7 @@ buttons	../fighter/models.py	/^    buttons = models.TextField()$/;"	kind:variabl
 can_delete	../accounts/admin.py	/^    can_delete = False$/;"	kind:variable	line:9
 city	../accounts/models.py	/^    city = models.CharField(max_length=30, blank=True)$/;"	kind:variable	line:10
 create_user_profile	../accounts/models.py	/^def create_user_profile(sender, instance, created, **kwargs):$/;"	kind:function	line:22
-data_edit	../fighter/views.py	/^def data_edit(request, pk):$/;"	kind:function	line:51
+data_edit	../fighter/views.py	/^def data_edit(request, pk):$/;"	kind:function	line:52
 dependencies	../accounts/migrations/0001_initial.py	/^    dependencies = [$/;"	kind:variable	line:14
 dependencies	../accounts/migrations/0002_auto_20170411_1745.py	/^    dependencies = [$/;"	kind:variable	line:12
 dependencies	../accounts/migrations/0003_auto_20170411_1850.py	/^    dependencies = [$/;"	kind:variable	line:11
@@ -251,12 +251,12 @@ initial	../accounts/migrations/0001_initial.py	/^    initial = True$/;"	kind:var
 initial	../fighter/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:12
 initial	../fighter/migrations/0005_stack.py	/^    initial = True$/;"	kind:variable	line:10
 inlines	../accounts/admin.py	/^    inlines = (UserInline,)$/;"	kind:variable	line:13
-lesson_five	../fighter/views.py	/^def lesson_five(request):$/;"	kind:function	line:166
-lesson_four	../fighter/views.py	/^def lesson_four(request):$/;"	kind:function	line:149
-lesson_one	../fighter/views.py	/^def lesson_one(request):$/;"	kind:function	line:84
-lesson_three	../fighter/views.py	/^def lesson_three(request):$/;"	kind:function	line:132
-lesson_two	../fighter/views.py	/^def lesson_two(request):$/;"	kind:function	line:109
-listdata	../fighter/views.py	/^def listdata(request):$/;"	kind:function	line:72
+lesson_five	../fighter/views.py	/^def lesson_five(request):$/;"	kind:function	line:170
+lesson_four	../fighter/views.py	/^def lesson_four(request):$/;"	kind:function	line:150
+lesson_one	../fighter/views.py	/^def lesson_one(request):$/;"	kind:function	line:85
+lesson_three	../fighter/views.py	/^def lesson_three(request):$/;"	kind:function	line:130
+lesson_two	../fighter/views.py	/^def lesson_two(request):$/;"	kind:function	line:110
+listdata	../fighter/views.py	/^def listdata(request):$/;"	kind:function	line:73
 login.html.py	../templates/registration/login.html.py	1;"	kind:file	line:1
 logout.html.py	../templates/registration/logout.html.py	1;"	kind:file	line:1
 manage.py	../manage.py	1;"	kind:file	line:1
@@ -287,7 +287,7 @@ model_name	../fighter/migrations/0010_auto_20170710_1204.py	/^            model_
 model_name	../fighter/migrations/0011_auto_20170710_1208.py	/^            model_name='lessontwo',$/;"	kind:variable	line:16
 models.py	../accounts/models.py	1;"	kind:file	line:1
 models.py	../fighter/models.py	1;"	kind:file	line:1
-myadmin	../fighter/views.py	/^def myadmin(request):$/;"	kind:function	line:32
+myadmin	../fighter/views.py	/^def myadmin(request):$/;"	kind:function	line:33
 name	../accounts/apps.py	/^    name = 'accounts'$/;"	kind:variable	line:5
 name	../accounts/migrations/0001_initial.py	/^            name='UserProfile',$/;"	kind:variable	line:20
 name	../accounts/migrations/0002_auto_20170411_1745.py	/^            name='user',$/;"	kind:variable	line:19
@@ -382,7 +382,7 @@ settings.py	../englishfighter/settings.py	1;"	kind:file	line:1
 settings_local.py	../englishfighter/settings_local.py	1;"	kind:file	line:1
 tests.py	../accounts/tests.py	1;"	kind:file	line:1
 tests.py	../fighter/tests.py	1;"	kind:file	line:1
-tmp	../fighter/views.py	/^def tmp(request):$/;"	kind:function	line:187
+tmp	../fighter/views.py	/^def tmp(request):$/;"	kind:function	line:191
 urlpatterns	../accounts/urls.py	/^urlpatterns = [$/;"	kind:variable	line:4
 urlpatterns	../englishfighter/urls.py	/^urlpatterns = [$/;"	kind:variable	line:27
 urlpatterns	../fighter/urls.py	/^urlpatterns = [$/;"	kind:variable	line:4

@@ -10,7 +10,8 @@ class LessonOne(models.Model):
         return self.russia
     
     class Meta:
-        verbose_name = 'LessonOne'
+        verbose_name = 'To be'
+        verbose_name_plural = 'To be'
 
 class LessonTwo(models.Model):
     russia = models.CharField(max_length=250)
@@ -21,7 +22,8 @@ class LessonTwo(models.Model):
         return self.russia
 
     class Meta:
-        verbose_name = 'LessonTwo'
+        verbose_name = 'Past.s, Present.s, Future.s'
+        verbose_name_plural = 'Past.s, Present.s, Future.s'
 
 class LessonThree(models.Model):
     russia = models.CharField(max_length=250)
@@ -32,7 +34,8 @@ class LessonThree(models.Model):
         return self.russia
 
     class Meta:
-        verbose_name = 'LessonThree'
+        verbose_name = 'Past.c, Present.c, Future.c'
+        verbose_name_plural = 'Past.c, Present.c, Future.c'
 
 class LessonFour(models.Model):
     russia = models.CharField(max_length=250)
@@ -43,7 +46,8 @@ class LessonFour(models.Model):
         return self.russia
 
     class Meta:
-        verbose_name = 'LessonFour'
+        verbose_name = 'Present perfect'
+        verbose_name_plural = 'Present perfect'
 
 class LessonFive(models.Model):
     russia = models.CharField(max_length=250)
@@ -54,7 +58,8 @@ class LessonFive(models.Model):
         return self.russia
 
     class Meta:
-        verbose_name = 'LessonFive'
+        verbose_name = 'Some-any, much-muny, few-little'
+        verbose_name_plural = 'Some-any, much-muny, few-little'
 
 class LessonSix(models.Model):
     russia = models.CharField(max_length=250)
@@ -66,3 +71,4 @@ class LessonSix(models.Model):
 
     class Meta:
         verbose_name = 'LessonSix'
+        verbose_name_plural = 'LessonSix'
